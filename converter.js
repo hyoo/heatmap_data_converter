@@ -37,7 +37,7 @@ function runConverter(dataset, output_format) {
 
     let output_header
     if (output_format === 'simple') {
-        const header_genomes = genomes.map(genome_id => `GENOME: ${genome_id}`)
+        const header_genomes = genomes.map(genome_id => `${genome_id}`)
         output_header = [ [''].concat(header_genomes).join('\t') ].join('\n')
     } else {
         const header_genomes = genomes.map(genome_id => `GENOME: ${genome_id}`)
