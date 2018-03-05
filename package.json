@@ -1,0 +1,16 @@
+{
+  "name": "heatmap_data_converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "converter.js",
+  "dependencies": {
+    "commander": "^2.14.1",
+    "fs-extra": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
