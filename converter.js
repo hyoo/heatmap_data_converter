@@ -45,7 +45,7 @@ function runConverter(dataset, output_format) {
         output_header = [ ['', ''].concat(header_genomes).join('\t'), ['', ''].concat(header_names).join('\t') ].join('\n')
     }
 
-    const res_body = fs.readJsonSync('micro.json', {encoding: 'utf8'})
+    const res_body = fs.readJsonSync(`${dataset}.json`, {encoding: 'utf8'})
     const families = res_body.result
 
     const output_body = []
