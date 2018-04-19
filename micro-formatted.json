@@ -1,0 +1,48 @@
+{  
+   "id":2,
+   "method":"proteinFamily",
+   "params":[  
+      {  
+         "familyType":"pgfam",
+         "heatmapAxis":"",
+         "genomeIds":[  
+            "1004954.6",
+            "520487.6",
+            "29461.21"
+         ],
+         "genomeFilterStatus":{  
+            "1004954.6":{  
+               "index":0,
+               "status":2,
+               "label":"Brucella suis bv. 1 str. S2"
+            },
+            "520487.6":{  
+               "index":1,
+               "status":2,
+               "label":"Brucella suis bv. 3 str. 686"
+            },
+            "29461.21":{  
+               "index":2,
+               "status":2,
+               "label":"Brucella suis strain Human/AR/US/1981"
+            }
+         },
+         "clusterRowOrder":[  
+
+         ],
+         "clusterColumnOrder":[  
+
+         ],
+         "keyword":"",
+         "perfectFamMatch":"A",
+         "min_member_count":null,
+         "max_member_count":null,
+         "min_genome_count":null,
+         "max_genome_count":null
+      },
+      {  
+         "token":""
+      }
+   ],
+   "jsonrpc":"2.0"
+}
