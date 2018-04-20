@@ -20,6 +20,8 @@ if (require.main === module) {
 
 function runConverter(dataset, output_format) {
 
+    //dataset = micro, large, etc. 
+
     console.log(`dataset: ${dataset}, output: ${output_format}`)
 
     // make sure files are exit
@@ -32,36 +34,81 @@ function runConverter(dataset, output_format) {
     debugger;
     const req_body = fs.readJsonSync(`req.${dataset}.json`, {encoding: 'utf8'})
     const genomes_set = req_body.params[0].genomeFilterStatus
+
+    //array of genomes "1004954.6", "520487.6", "29461.21"
     const genomes = Object.keys(genomes_set)
+    //int
     const total_genomes = genomes.length
 
-    let output_header
-    if (output_format === 'simple') {
-        const header_genomes = genomes.map(genome_id => `${genome_id}`)
-        output_header = [ [''].concat(header_genomes).join('\t') ].join('\n')
-    } else {
-        const header_genomes = genomes.map(genome_id => `GENOME: ${genome_id}`)
-        const header_names = genomes.map(genome_id => `NAME: ${genomes_set[genome_id].label}`)
-        output_header = [ ['', ''].concat(header_genomes).join('\t'), ['', ''].concat(header_names).join('\t') ].join('\n')
-    }
+    var clustergrammerdata = {};
+    clustergrammerdata.row_nodes = [];
+    clustergrammerdata.col_nodes = [];
+    clustergrammerdata.mat = [];
 
     const res_body = fs.readJsonSync(`${dataset}.json`, {encoding: 'utf8'})
-    const families = res_body.result
+    const families = res_body.result;
 
-    const output_body = []
+    // https://media.readthedocs.org/pdf/clustergrammer/stable/clustergrammer.pdf
+    // row_nodes and col_nodes objects are required to have three properties: name, clust, rank. 
+
+    // "name": "ATF7",
+    // "clust": 67,
+    // "rank": 66,
 
     for (let i = 0, len = families.length; i < len; i++) {
-        const family = families[i]
-        const row = (output_format === 'simple') ? [`${family.family_id}`] : [`FAMILY: ${family.family_id}`, `FAMILY Name: ${family.description}`]
-        for(let j = 0; j < total_genomes; j++) {
-            const index = j * 2
-            const val = parseInt(family.genomes.charAt(index) + family.genomes.charAt(index + 1), 16);
-            // console.log(`${family.family_id}: ${index} -> ${family.genomes.charAt(index)}, ${index+1} -> ${family.genomes.charAt(index + 1)} => ${val} `)
-            row.push(val)
-        }
-        output_body.push(row.join('\t'))
+        const family = families[i];
+        var row_node = {};
+        
+        row_node.name = "FAMILY: " + family.family_id;
+        //row_node.ini = families.length - i;
+        row_node.clust = families.length - i;
+        row_node.rank = i;
+        //todo - determine rankvar better
+        //row_node.rankvar = i + 1;
+        row_node["cat-0"] = "FAMILY NAME: " + family.description;
+        //todo - determine cat-o index better
+        //row_node["cat_0_index"] = i;
+
+        clustergrammerdata.row_nodes.push(row_node);
     }
 
-    console.log(`writing converted file to ${dataset}.tsv`)
-    fs.writeFileSync(`${dataset}.tsv`, output_header + '\n' + output_body.join('\n'), {encoding: 'utf8'})
+    const numberGenomes = Object.keys(genomes_set).length;
+    console.log("number of genomes: " + numberGenomes);
+
+    for (var genome in genomes_set) {
+        var col_node = {};
+
+        // console.log(genomes_set)
+        // console.log(genome)
+        var index = genomes_set[genome].index;
+        // console.log("Index: " + index);
+        // console.log(genomes_set[genome])
+        // console.log('----------')
+
+        col_node.name = "Genome: " + genome;
+        //col_node.ini = numberGenomes - index;
+        col_node.clust = numberGenomes - index;
+
+        //TODO - improve rank
+        col_node.rank = index;
+
+        col_node["cat-0"] = "NAME " + genomes_set[genome].label;
+        //col_node["cat_0_index"] = index;
+
+        clustergrammerdata.col_nodes.push(col_node);
+    }
+
+    for (let i = 0, len = families.length; i < len; i++) {
+        const family = families[i];
+        var genomes_count = family.genomes;
+        var mat = genomes_count.match(/.{1,2}/g);
+        console.log("Mat: " + mat);
+
+        clustergrammerdata.mat.push(mat);
+    }
+
+    console.log(clustergrammerdata);
+
+    console.log(`writing converted file to ${dataset}_clustergrammer.json`)
+    fs.writeFileSync(`${dataset}_clustergrammer.json`, JSON.stringify(clustergrammerdata));
 }
