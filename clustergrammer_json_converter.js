@@ -33,11 +33,10 @@ function runConverter(dataset, output_format) {
     }
     debugger;
     const req_body = fs.readJsonSync(`req.${dataset}.json`, {encoding: 'utf8'})
-    //const genomes_set = req_body.params[0].genomeFilterStatus
+    const genomes_set = req_body.params[0].genomeFilterStatus
 
     //array of genomes "1004954.6", "520487.6", "29461.21"
-    //const genomes = Object.keys(genomes_set)
-    const genomes = req_body.params[0].genomeIds;
+    const genomes = Object.keys(genomes_set)
     //int
     const total_genomes = genomes.length
 
@@ -73,42 +72,31 @@ function runConverter(dataset, output_format) {
         clustergrammerdata.row_nodes.push(row_node);
     }
 
-    //const numberGenomes = Object.keys(genomes_set).length;
-    console.log("number of genomes: " + total_genomes);
+    const numberGenomes = Object.keys(genomes_set).length;
+    console.log("number of genomes: " + numberGenomes);
 
-    for (var i = 0; i < total_genomes.length; i++) {
+    for (var genome in genomes_set) {
         var col_node = {};
 
-        col_node.name = "Genome: " + total_genomes[i];
+        // console.log(genomes_set)
+        // console.log(genome)
+        var index = genomes_set[genome].index;
+        // console.log("Index: " + index);
+        // console.log(genomes_set[genome])
+        // console.log('----------')
+
+        col_node.name = "Genome: " + genome;
         //col_node.ini = numberGenomes - index;
-        col_node.clust = numberGenomes - i;
-        col_node.rank = i;
-        col_node["cat-0"] = "NAME " + total_genomes[i];
+        col_node.clust = numberGenomes - index;
+
+        //TODO - improve rank
+        col_node.rank = index;
+
+        col_node["cat-0"] = "NAME " + genomes_set[genome].label;
+        //col_node["cat_0_index"] = index;
+
         clustergrammerdata.col_nodes.push(col_node);
     }
-
-    // for (var genome in genomes_set) {
-    //     var col_node = {};
-
-    //     // console.log(genomes_set)
-    //     // console.log(genome)
-    //     var index = genomes_set[genome].index;
-    //     // console.log("Index: " + index);
-    //     // console.log(genomes_set[genome])
-    //     // console.log('----------')
-
-    //     col_node.name = "Genome: " + genome;
-    //     //col_node.ini = numberGenomes - index;
-    //     col_node.clust = numberGenomes - index;
-
-    //     //TODO - improve rank
-    //     col_node.rank = index;
-
-    //     col_node["cat-0"] = "NAME " + genomes_set[genome].label;
-    //     //col_node["cat_0_index"] = index;
-
-    //     clustergrammerdata.col_nodes.push(col_node);
-    // }
 
     for (let i = 0, len = families.length; i < len; i++) {
         const family = families[i];
