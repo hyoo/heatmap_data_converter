@@ -1,0 +1,3008 @@
+{
+  "id": 2,
+  "method": "proteinFamily",
+  "params": [
+    {
+      "familyType": "pgfam",
+      "heatmapAxis": "",
+      "genomeIds": [
+        "1328357.3",
+        "1328356.3",
+        "1328355.3",
+        "1341669.3",
+        "1341670.3",
+        "1341671.3",
+        "1341672.3",
+        "1210454.5",
+        "1210454.3",
+        "1169203.3",
+        "1169204.3",
+        "1169205.3",
+        "1169205.5",
+        "1169206.3",
+        "1169207.3",
+        "1169208.3",
+        "1169209.3",
+        "1160177.3",
+        "1160181.3",
+        "1160183.3",
+        "1160199.3",
+        "1160205.3",
+        "1169210.3",
+        "1160209.3",
+        "1160200.3",
+        "1169211.3",
+        "1160182.3",
+        "1169212.3",
+        "1328339.3",
+        "1328340.3",
+        "1169213.3",
+        "1198698.3",
+        "1328341.3",
+        "1160185.3",
+        "1160203.3",
+        "1160198.3",
+        "1169214.3",
+        "1401691.4",
+        "1328342.3",
+        "1328343.3",
+        "1328344.3",
+        "1169215.3",
+        "1328345.3",
+        "1160187.3",
+        "1160179.3",
+        "1160193.3",
+        "1328346.3",
+        "1328347.3",
+        "1169216.3",
+        "1160206.3",
+        "1160178.3",
+        "1198697.3",
+        "1160194.3",
+        "1328348.3",
+        "1341673.3",
+        "1328352.3",
+        "1328350.3",
+        "1328351.3",
+        "1328349.3",
+        "1341674.3",
+        "1328353.3",
+        "1160196.3",
+        "1160197.3",
+        "1169217.3",
+        "1328354.3",
+        "1341675.3",
+        "1341676.3",
+        "1104320.3",
+        "1328358.3",
+        "1328359.3",
+        "1328360.3",
+        "1328361.3",
+        "1198692.3",
+        "1198693.3",
+        "1198688.3",
+        "1198687.3",
+        "1198689.3",
+        "1198690.3",
+        "1198691.3",
+        "1160191.3",
+        "1169218.3",
+        "1169219.3",
+        "1169220.3",
+        "1160192.3",
+        "1238668.3",
+        "1160184.3",
+        "1160202.3",
+        "1160180.3",
+        "1160207.3",
+        "1160188.3",
+        "1160208.3",
+        "1160190.3",
+        "1160204.3",
+        "1408184.3",
+        "1408185.3",
+        "1160163.3",
+        "1160164.3",
+        "1160165.3",
+        "1160166.3",
+        "1160167.3",
+        "1160168.3",
+        "1160169.3",
+        "1160170.3",
+        "1160161.3",
+        "1160171.3",
+        "1160172.3",
+        "1160173.3",
+        "1160160.4",
+        "1160174.3",
+        "1160175.3",
+        "1160176.4",
+        "1160162.3",
+        "1169221.3",
+        "1198700.3",
+        "1397701.3",
+        "35802.100",
+        "35802.101",
+        "35802.102",
+        "35802.103",
+        "35802.104",
+        "35802.105",
+        "35802.106",
+        "35802.107",
+        "35802.108",
+        "35802.109",
+        "35802.110",
+        "35802.111",
+        "35802.112",
+        "35802.113",
+        "35802.114",
+        "35802.115",
+        "35802.116",
+        "35802.117",
+        "35802.118",
+        "35802.119",
+        "35802.120",
+        "35802.121",
+        "35802.122",
+        "35802.123",
+        "35802.124",
+        "35802.126",
+        "35802.127",
+        "35802.128",
+        "35802.129",
+        "35802.130",
+        "35802.131",
+        "35802.132",
+        "35802.133",
+        "35802.134",
+        "35802.135",
+        "1229907.3",
+        "262698.4",
+        "35802.3",
+        "35802.4",
+        "35802.5",
+        "35802.6",
+        "35802.7",
+        "35802.8",
+        "35802.9",
+        "35802.10",
+        "35802.11",
+        "35802.12",
+        "35802.13",
+        "35802.14",
+        "35802.15",
+        "35802.16",
+        "35802.17",
+        "35802.18",
+        "35802.19",
+        "35802.20",
+        "35802.21",
+        "35802.22",
+        "35802.23",
+        "35802.24",
+        "35802.25",
+        "35802.26",
+        "35802.27",
+        "35802.28",
+        "35802.29",
+        "35802.30",
+        "35802.31",
+        "35802.32",
+        "35802.33",
+        "35802.34",
+        "35802.35",
+        "35802.98",
+        "35802.37",
+        "35802.38",
+        "35802.39",
+        "35802.40",
+        "35802.41",
+        "35802.42",
+        "35802.43",
+        "35802.44",
+        "35802.45",
+        "35802.46",
+        "35802.47",
+        "35802.48",
+        "35802.94",
+        "35802.97",
+        "35802.96",
+        "35802.52",
+        "35802.53",
+        "35802.54",
+        "35802.55",
+        "35802.95",
+        "35802.57",
+        "35802.58",
+        "35802.59",
+        "35802.60",
+        "35802.61",
+        "35802.62",
+        "35802.63",
+        "35802.64",
+        "35802.65",
+        "35802.66",
+        "35802.67",
+        "35802.68",
+        "35802.69",
+        "35802.70",
+        "35802.71",
+        "35802.72",
+        "35802.73",
+        "35802.74",
+        "35802.75",
+        "35802.76",
+        "35802.77",
+        "35802.78",
+        "35802.79",
+        "35802.80",
+        "35802.81",
+        "35802.82",
+        "35802.83",
+        "35802.92",
+        "35802.93",
+        "35802.84",
+        "35802.85",
+        "35802.86",
+        "35802.87",
+        "35802.88",
+        "35802.89",
+        "35802.90",
+        "35802.91",
+        "1210451.3",
+        "1210446.3",
+        "1051060.3",
+        "1051061.3",
+        "1051062.3",
+        "1051055.3",
+        "1051056.3",
+        "1051057.3",
+        "1051058.3",
+        "644332.5",
+        "644332.6",
+        "644332.7",
+        "644332.8",
+        "644332.9",
+        "644332.3",
+        "644332.4",
+        "1210450.3",
+        "644335.12",
+        "644335.3",
+        "644335.4",
+        "644335.5",
+        "644335.6",
+        "644335.7",
+        "644335.8",
+        "644335.11",
+        "644335.10",
+        "1160201.3",
+        "235.36",
+        "235.32",
+        "235.34",
+        "235.33",
+        "235.110",
+        "235.101",
+        "235.40",
+        "235.102",
+        "235.106",
+        "235.105",
+        "235.98",
+        "235.37",
+        "235.103",
+        "235.107",
+        "235.94",
+        "235.97",
+        "235.95",
+        "235.38",
+        "235.100",
+        "235.96",
+        "235.99",
+        "235.108",
+        "235.104",
+        "235.109",
+        "235.31",
+        "235.35",
+        "235.39",
+        "235.41",
+        "235.111",
+        "235.29",
+        "235.92",
+        "235.77",
+        "235.80",
+        "235.79",
+        "235.74",
+        "235.76",
+        "235.75",
+        "235.78",
+        "235.93",
+        "235.28",
+        "235.72",
+        "235.30",
+        "1341684.3",
+        "1229903.3",
+        "1169222.3",
+        "1341685.3",
+        "1210445.3",
+        "1198686.3",
+        "1198684.3",
+        "1198685.4",
+        "1198699.3",
+        "1104321.3",
+        "1198696.3",
+        "1408887.3",
+        "36855.27",
+        "36855.29",
+        "36855.28",
+        "36855.12",
+        "36855.33",
+        "36855.3",
+        "1423891.3",
+        "1407053.3",
+        "120577.6",
+        "1341686.3",
+        "1388745.3",
+        "1266367.3",
+        "1388740.3",
+        "1143190.3",
+        "1457189.3",
+        "1160220.3",
+        "1160224.3",
+        "1351836.3",
+        "1247411.3",
+        "1169223.3",
+        "1198679.3",
+        "1198680.3",
+        "1198681.3",
+        "1160219.3",
+        "1160211.3",
+        "1169224.3",
+        "1244532.3",
+        "1160226.3",
+        "1160210.3",
+        "1160215.3",
+        "1169225.3",
+        "1160225.3",
+        "1169226.3",
+        "1210452.3",
+        "1029825.4",
+        "1160218.3",
+        "1148757.3",
+        "1160217.3",
+        "1160223.3",
+        "1160214.3",
+        "1160221.3",
+        "1160213.3",
+        "1169227.3",
+        "1169228.3",
+        "1169229.3",
+        "1160216.3",
+        "1160222.3",
+        "1229906.3",
+        "224914.51",
+        "1210447.3",
+        "1210449.3",
+        "1004956.3",
+        "520465.6",
+        "1229904.3",
+        "29459.399",
+        "29459.159",
+        "29459.158",
+        "29459.51",
+        "29459.388",
+        "29459.381",
+        "29459.380",
+        "29459.382",
+        "29459.379",
+        "29459.137",
+        "29459.138",
+        "29459.387",
+        "29459.197",
+        "29459.198",
+        "29459.196",
+        "29459.14",
+        "29459.15",
+        "29459.16",
+        "29459.44",
+        "29459.47",
+        "29459.48",
+        "29459.45",
+        "29459.46",
+        "29459.49",
+        "29459.50",
+        "29459.43",
+        "29459.157",
+        "29459.153",
+        "29459.154",
+        "29459.152",
+        "29459.151",
+        "29459.31",
+        "29459.104",
+        "29459.401",
+        "29459.383",
+        "29459.199",
+        "29459.386",
+        "29459.385",
+        "29459.384",
+        "1169230.3",
+        "1169231.3",
+        "1169232.3",
+        "444178.3",
+        "1198678.3",
+        "1293920.3",
+        "1293918.3",
+        "1293917.3",
+        "1293916.3",
+        "1293922.3",
+        "1293921.3",
+        "1293919.3",
+        "1293912.3",
+        "1293913.3",
+        "1293914.3",
+        "1293915.3",
+        "1341688.3",
+        "1891098.3",
+        "1169234.3",
+        "1160235.3",
+        "1867845.3",
+        "1906855.3",
+        "1906856.3",
+        "1906857.3",
+        "437670.3",
+        "1169233.3",
+        "437687.3",
+        "437671.3",
+        "693748.4",
+        "437663.3",
+        "1160234.3",
+        "437684.3",
+        "437685.3",
+        "1170703.3",
+        "1171378.5",
+        "1171378.3",
+        "1388743.3",
+        "1388744.3",
+        "1388739.3",
+        "1388742.3",
+        "1160227.3",
+        "1160232.3",
+        "1160228.3",
+        "1160233.3",
+        "1160230.3",
+        "1198695.3",
+        "1388741.3",
+        "1198683.3",
+        "1198682.3",
+        "1160229.3",
+        "1198694.3",
+        "1169237.3",
+        "1169236.3",
+        "1169238.3",
+        "1169239.3",
+        "1169240.3",
+        "1169241.3",
+        "1169242.3",
+        "1160231.3",
+        "1169243.3",
+        "1169244.3",
+        "1210453.3",
+        "644346.3",
+        "644346.4",
+        "644346.5",
+        "644346.6",
+        "644346.7",
+        "1210444.3",
+        "1004954.6",
+        "1210448.3",
+        "645170.29",
+        "645170.30",
+        "645170.31",
+        "645170.27",
+        "645170.28",
+        "520488.3",
+        "29461.52",
+        "29461.11",
+        "29461.21",
+        "29461.55"
+      ],
+      "genomeFilterStatus": {
+        "1328357.3": {
+          "index": 0,
+          "status": 2,
+          "label": "Brucella abortus 01-0065"
+        },
+        "1328356.3": {
+          "index": 1,
+          "status": 2,
+          "label": "Brucella abortus 01-0585"
+        },
+        "1328355.3": {
+          "index": 2,
+          "status": 2,
+          "label": "Brucella abortus 01-0648"
+        },
+        "1341669.3": {
+          "index": 3,
+          "status": 2,
+          "label": "Brucella abortus 01-4165"
+        },
+        "1341670.3": {
+          "index": 4,
+          "status": 2,
+          "label": "Brucella abortus 03-2770-11"
+        },
+        "1341671.3": {
+          "index": 5,
+          "status": 2,
+          "label": "Brucella abortus 03-4923-239-D"
+        },
+        "1341672.3": {
+          "index": 6,
+          "status": 2,
+          "label": "Brucella abortus 07-0994-2411"
+        },
+        "1210454.5": {
+          "index": 7,
+          "status": 2,
+          "label": "Brucella abortus 104M"
+        },
+        "1210454.3": {
+          "index": 8,
+          "status": 2,
+          "label": "Brucella abortus 104M"
+        },
+        "1169203.3": {
+          "index": 9,
+          "status": 2,
+          "label": "Brucella abortus 225/65"
+        },
+        "1169204.3": {
+          "index": 10,
+          "status": 2,
+          "label": "Brucella abortus 355/78"
+        },
+        "1169205.3": {
+          "index": 11,
+          "status": 2,
+          "label": "Brucella abortus 544"
+        },
+        "1169205.5": {
+          "index": 12,
+          "status": 2,
+          "label": "Brucella abortus 544"
+        },
+        "1169206.3": {
+          "index": 13,
+          "status": 2,
+          "label": "Brucella abortus 600/64"
+        },
+        "1169207.3": {
+          "index": 14,
+          "status": 2,
+          "label": "Brucella abortus 63/130"
+        },
+        "1169208.3": {
+          "index": 15,
+          "status": 2,
+          "label": "Brucella abortus 63/138"
+        },
+        "1169209.3": {
+          "index": 16,
+          "status": 2,
+          "label": "Brucella abortus 63/144"
+        },
+        "1160177.3": {
+          "index": 17,
+          "status": 2,
+          "label": "Brucella abortus 63/168"
+        },
+        "1160181.3": {
+          "index": 18,
+          "status": 2,
+          "label": "Brucella abortus 63/294"
+        },
+        "1160183.3": {
+          "index": 19,
+          "status": 2,
+          "label": "Brucella abortus 63/59"
+        },
+        "1160199.3": {
+          "index": 20,
+          "status": 2,
+          "label": "Brucella abortus 64/108"
+        },
+        "1160205.3": {
+          "index": 21,
+          "status": 2,
+          "label": "Brucella abortus 64/122"
+        },
+        "1169210.3": {
+          "index": 22,
+          "status": 2,
+          "label": "Brucella abortus 64/81"
+        },
+        "1160209.3": {
+          "index": 23,
+          "status": 2,
+          "label": "Brucella abortus 65/110"
+        },
+        "1160200.3": {
+          "index": 24,
+          "status": 2,
+          "label": "Brucella abortus 65/157"
+        },
+        "1169211.3": {
+          "index": 25,
+          "status": 2,
+          "label": "Brucella abortus 65/63"
+        },
+        "1160182.3": {
+          "index": 26,
+          "status": 2,
+          "label": "Brucella abortus 67/781"
+        },
+        "1169212.3": {
+          "index": 27,
+          "status": 2,
+          "label": "Brucella abortus 67/93"
+        },
+        "1328339.3": {
+          "index": 28,
+          "status": 2,
+          "label": "Brucella abortus 68-3396P"
+        },
+        "1328340.3": {
+          "index": 29,
+          "status": 2,
+          "label": "Brucella abortus 76-1413"
+        },
+        "1169213.3": {
+          "index": 30,
+          "status": 2,
+          "label": "Brucella abortus 78/14"
+        },
+        "1198698.3": {
+          "index": 31,
+          "status": 2,
+          "label": "Brucella abortus 78/32"
+        },
+        "1328341.3": {
+          "index": 32,
+          "status": 2,
+          "label": "Brucella abortus 80-1399"
+        },
+        "1160185.3": {
+          "index": 33,
+          "status": 2,
+          "label": "Brucella abortus 80/101"
+        },
+        "1160203.3": {
+          "index": 34,
+          "status": 2,
+          "label": "Brucella abortus 80/102"
+        },
+        "1160198.3": {
+          "index": 35,
+          "status": 2,
+          "label": "Brucella abortus 80/108"
+        },
+        "1169214.3": {
+          "index": 36,
+          "status": 2,
+          "label": "Brucella abortus 80/28"
+        },
+        "1401691.4": {
+          "index": 37,
+          "status": 2,
+          "label": "Brucella abortus 82"
+        },
+        "1328342.3": {
+          "index": 38,
+          "status": 2,
+          "label": "Brucella abortus 82-2330"
+        },
+        "1328343.3": {
+          "index": 39,
+          "status": 2,
+          "label": "Brucella abortus 82-3893"
+        },
+        "1328344.3": {
+          "index": 40,
+          "status": 2,
+          "label": "Brucella abortus 84-0928"
+        },
+        "1169215.3": {
+          "index": 41,
+          "status": 2,
+          "label": "Brucella abortus 84/26"
+        },
+        "1328345.3": {
+          "index": 42,
+          "status": 2,
+          "label": "Brucella abortus 85-1058"
+        },
+        "1160187.3": {
+          "index": 43,
+          "status": 2,
+          "label": "Brucella abortus 85/140"
+        },
+        "1160179.3": {
+          "index": 44,
+          "status": 2,
+          "label": "Brucella abortus 85/69"
+        },
+        "1160193.3": {
+          "index": 45,
+          "status": 2,
+          "label": "Brucella abortus 863/67"
+        },
+        "1328346.3": {
+          "index": 46,
+          "status": 2,
+          "label": "Brucella abortus 87-0095"
+        },
+        "1328347.3": {
+          "index": 47,
+          "status": 2,
+          "label": "Brucella abortus 87-2211"
+        },
+        "1169216.3": {
+          "index": 48,
+          "status": 2,
+          "label": "Brucella abortus 87/28"
+        },
+        "1160206.3": {
+          "index": 49,
+          "status": 2,
+          "label": "Brucella abortus 877/67"
+        },
+        "1160178.3": {
+          "index": 50,
+          "status": 2,
+          "label": "Brucella abortus 88/19"
+        },
+        "1198697.3": {
+          "index": 51,
+          "status": 2,
+          "label": "Brucella abortus 88/217"
+        },
+        "1160194.3": {
+          "index": 52,
+          "status": 2,
+          "label": "Brucella abortus 88/226"
+        },
+        "1328348.3": {
+          "index": 53,
+          "status": 2,
+          "label": "Brucella abortus 89-0363"
+        },
+        "1341673.3": {
+          "index": 54,
+          "status": 2,
+          "label": "Brucella abortus 89-2646-1238"
+        },
+        "1328352.3": {
+          "index": 55,
+          "status": 2,
+          "label": "Brucella abortus 90-0737"
+        },
+        "1328350.3": {
+          "index": 56,
+          "status": 2,
+          "label": "Brucella abortus 90-0742"
+        },
+        "1328351.3": {
+          "index": 57,
+          "status": 2,
+          "label": "Brucella abortus 90-0775"
+        },
+        "1328349.3": {
+          "index": 58,
+          "status": 2,
+          "label": "Brucella abortus 90-0962"
+        },
+        "1341674.3": {
+          "index": 59,
+          "status": 2,
+          "label": "Brucella abortus 90-12178"
+        },
+        "1328353.3": {
+          "index": 60,
+          "status": 2,
+          "label": "Brucella abortus 90-1280"
+        },
+        "1160196.3": {
+          "index": 61,
+          "status": 2,
+          "label": "Brucella abortus 90/50"
+        },
+        "1160197.3": {
+          "index": 62,
+          "status": 2,
+          "label": "Brucella abortus 93/1"
+        },
+        "1169217.3": {
+          "index": 63,
+          "status": 2,
+          "label": "Brucella abortus 93/2"
+        },
+        "1328354.3": {
+          "index": 64,
+          "status": 2,
+          "label": "Brucella abortus 94-1313"
+        },
+        "1341675.3": {
+          "index": 65,
+          "status": 2,
+          "label": "Brucella abortus 99-9971-135"
+        },
+        "1341676.3": {
+          "index": 66,
+          "status": 2,
+          "label": "Brucella abortus 99-9971-159"
+        },
+        "1104320.3": {
+          "index": 67,
+          "status": 2,
+          "label": "Brucella abortus A13334"
+        },
+        "1328358.3": {
+          "index": 68,
+          "status": 2,
+          "label": "Brucella abortus B10-0018"
+        },
+        "1328359.3": {
+          "index": 69,
+          "status": 2,
+          "label": "Brucella abortus B10-0091"
+        },
+        "1328360.3": {
+          "index": 70,
+          "status": 2,
+          "label": "Brucella abortus B10-0973"
+        },
+        "1328361.3": {
+          "index": 71,
+          "status": 2,
+          "label": "Brucella abortus BC95"
+        },
+        "1198692.3": {
+          "index": 72,
+          "status": 2,
+          "label": "Brucella abortus CNGB 1011"
+        },
+        "1198693.3": {
+          "index": 73,
+          "status": 2,
+          "label": "Brucella abortus CNGB 1432"
+        },
+        "1198688.3": {
+          "index": 74,
+          "status": 2,
+          "label": "Brucella abortus CNGB 308"
+        },
+        "1198687.3": {
+          "index": 75,
+          "status": 2,
+          "label": "Brucella abortus CNGB 436"
+        },
+        "1198689.3": {
+          "index": 76,
+          "status": 2,
+          "label": "Brucella abortus CNGB 752"
+        },
+        "1198690.3": {
+          "index": 77,
+          "status": 2,
+          "label": "Brucella abortus CNGB 759"
+        },
+        "1198691.3": {
+          "index": 78,
+          "status": 2,
+          "label": "Brucella abortus CNGB 966"
+        },
+        "1160191.3": {
+          "index": 79,
+          "status": 2,
+          "label": "Brucella abortus F1/06 B1"
+        },
+        "1169218.3": {
+          "index": 80,
+          "status": 2,
+          "label": "Brucella abortus F1/06-B21"
+        },
+        "1169219.3": {
+          "index": 81,
+          "status": 2,
+          "label": "Brucella abortus F10/05-11"
+        },
+        "1169220.3": {
+          "index": 82,
+          "status": 2,
+          "label": "Brucella abortus F10/06-3"
+        },
+        "1160192.3": {
+          "index": 83,
+          "status": 2,
+          "label": "Brucella abortus F2/06-8"
+        },
+        "1238668.3": {
+          "index": 84,
+          "status": 2,
+          "label": "Brucella abortus F3/01-300"
+        },
+        "1160184.3": {
+          "index": 85,
+          "status": 2,
+          "label": "Brucella abortus F3/07-1"
+        },
+        "1160202.3": {
+          "index": 86,
+          "status": 2,
+          "label": "Brucella abortus F5/04-7"
+        },
+        "1160180.3": {
+          "index": 87,
+          "status": 2,
+          "label": "Brucella abortus F6/05-2"
+        },
+        "1160207.3": {
+          "index": 88,
+          "status": 2,
+          "label": "Brucella abortus F6/05-3"
+        },
+        "1160188.3": {
+          "index": 89,
+          "status": 2,
+          "label": "Brucella abortus F6/05-4"
+        },
+        "1160208.3": {
+          "index": 90,
+          "status": 2,
+          "label": "Brucella abortus F6/05-9"
+        },
+        "1160190.3": {
+          "index": 91,
+          "status": 2,
+          "label": "Brucella abortus I103_(UK3/01)"
+        },
+        "1160204.3": {
+          "index": 92,
+          "status": 2,
+          "label": "Brucella abortus LEVI237"
+        },
+        "1408184.3": {
+          "index": 93,
+          "status": 2,
+          "label": "Brucella abortus LMN1"
+        },
+        "1408185.3": {
+          "index": 94,
+          "status": 2,
+          "label": "Brucella abortus LMN2"
+        },
+        "1160163.3": {
+          "index": 95,
+          "status": 2,
+          "label": "Brucella abortus NI240"
+        },
+        "1160164.3": {
+          "index": 96,
+          "status": 2,
+          "label": "Brucella abortus NI274"
+        },
+        "1160165.3": {
+          "index": 97,
+          "status": 2,
+          "label": "Brucella abortus NI352"
+        },
+        "1160166.3": {
+          "index": 98,
+          "status": 2,
+          "label": "Brucella abortus NI380"
+        },
+        "1160167.3": {
+          "index": 99,
+          "status": 2,
+          "label": "Brucella abortus NI388"
+        },
+        "1160168.3": {
+          "index": 100,
+          "status": 2,
+          "label": "Brucella abortus NI422"
+        },
+        "1160169.3": {
+          "index": 101,
+          "status": 2,
+          "label": "Brucella abortus NI492"
+        },
+        "1160170.3": {
+          "index": 102,
+          "status": 2,
+          "label": "Brucella abortus NI495a"
+        },
+        "1160161.3": {
+          "index": 103,
+          "status": 2,
+          "label": "Brucella abortus NI518"
+        },
+        "1160171.3": {
+          "index": 104,
+          "status": 2,
+          "label": "Brucella abortus NI593"
+        },
+        "1160172.3": {
+          "index": 105,
+          "status": 2,
+          "label": "Brucella abortus NI613"
+        },
+        "1160173.3": {
+          "index": 106,
+          "status": 2,
+          "label": "Brucella abortus NI622"
+        },
+        "1160160.4": {
+          "index": 107,
+          "status": 2,
+          "label": "Brucella abortus NI628"
+        },
+        "1160174.3": {
+          "index": 108,
+          "status": 2,
+          "label": "Brucella abortus NI633"
+        },
+        "1160175.3": {
+          "index": 109,
+          "status": 2,
+          "label": "Brucella abortus NI639"
+        },
+        "1160176.4": {
+          "index": 110,
+          "status": 2,
+          "label": "Brucella abortus NI645"
+        },
+        "1160162.3": {
+          "index": 111,
+          "status": 2,
+          "label": "Brucella abortus NI649"
+        },
+        "1169221.3": {
+          "index": 112,
+          "status": 2,
+          "label": "Brucella abortus R42-08"
+        },
+        "1198700.3": {
+          "index": 113,
+          "status": 2,
+          "label": "Brucella abortus RB51-AHVLA"
+        },
+        "1397701.3": {
+          "index": 114,
+          "status": 2,
+          "label": "Brucella abortus S99"
+        },
+        "35802.100": {
+          "index": 115,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 01-0352"
+        },
+        "35802.101": {
+          "index": 116,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 01-0585"
+        },
+        "35802.102": {
+          "index": 117,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 01-0648"
+        },
+        "35802.103": {
+          "index": 118,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 01-0649"
+        },
+        "35802.104": {
+          "index": 119,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 01-0650"
+        },
+        "35802.105": {
+          "index": 120,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 02-0204"
+        },
+        "35802.106": {
+          "index": 121,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 02-0209"
+        },
+        "35802.107": {
+          "index": 122,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 02-0210"
+        },
+        "35802.108": {
+          "index": 123,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 02-0211"
+        },
+        "35802.109": {
+          "index": 124,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 02-0212"
+        },
+        "35802.110": {
+          "index": 125,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 02-0226"
+        },
+        "35802.111": {
+          "index": 126,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 02-0227"
+        },
+        "35802.112": {
+          "index": 127,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 02-0228"
+        },
+        "35802.113": {
+          "index": 128,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 02-0229"
+        },
+        "35802.114": {
+          "index": 129,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 02-0291"
+        },
+        "35802.115": {
+          "index": 130,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 03-0006"
+        },
+        "35802.116": {
+          "index": 131,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 03-0210"
+        },
+        "35802.117": {
+          "index": 132,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 04-0020"
+        },
+        "35802.118": {
+          "index": 133,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 04-0021"
+        },
+        "35802.119": {
+          "index": 134,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 04-0060"
+        },
+        "35802.120": {
+          "index": 135,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 04-0067"
+        },
+        "35802.121": {
+          "index": 136,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 04-0083"
+        },
+        "35802.122": {
+          "index": 137,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 04-0309"
+        },
+        "35802.123": {
+          "index": 138,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 04-0552"
+        },
+        "35802.124": {
+          "index": 139,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 05-0444"
+        },
+        "35802.126": {
+          "index": 140,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 05-1285"
+        },
+        "35802.127": {
+          "index": 141,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 06-0027"
+        },
+        "35802.128": {
+          "index": 142,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 10-0028"
+        },
+        "35802.129": {
+          "index": 143,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 10-0474"
+        },
+        "35802.130": {
+          "index": 144,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 12-0585S2"
+        },
+        "35802.131": {
+          "index": 145,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 12-0587S3"
+        },
+        "35802.132": {
+          "index": 146,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 12-0599S2"
+        },
+        "35802.133": {
+          "index": 147,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 12-0602S2"
+        },
+        "35802.134": {
+          "index": 148,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 13-0088"
+        },
+        "35802.135": {
+          "index": 149,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 13-0088S2"
+        },
+        "1229907.3": {
+          "index": 150,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 134"
+        },
+        "262698.4": {
+          "index": 151,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. 9-941"
+        },
+        "35802.3": {
+          "index": 152,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B01-0634"
+        },
+        "35802.4": {
+          "index": 153,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B02-0187"
+        },
+        "35802.5": {
+          "index": 154,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B02-0235"
+        },
+        "35802.6": {
+          "index": 155,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B02-0236"
+        },
+        "35802.7": {
+          "index": 156,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B02-0237"
+        },
+        "35802.8": {
+          "index": 157,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B02-0239"
+        },
+        "35802.9": {
+          "index": 158,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B02-0241"
+        },
+        "35802.10": {
+          "index": 159,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B02-0242"
+        },
+        "35802.11": {
+          "index": 160,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B03-0209"
+        },
+        "35802.12": {
+          "index": 161,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B04-0053"
+        },
+        "35802.13": {
+          "index": 162,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B06-0028"
+        },
+        "35802.14": {
+          "index": 163,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B07-0266"
+        },
+        "35802.15": {
+          "index": 164,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B08-0056"
+        },
+        "35802.16": {
+          "index": 165,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B08-0416"
+        },
+        "35802.17": {
+          "index": 166,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B10-0018"
+        },
+        "35802.18": {
+          "index": 167,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B10-0035"
+        },
+        "35802.19": {
+          "index": 168,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B10-0141"
+        },
+        "35802.20": {
+          "index": 169,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B10-0173"
+        },
+        "35802.21": {
+          "index": 170,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B10-0407"
+        },
+        "35802.22": {
+          "index": 171,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B10-0654"
+        },
+        "35802.23": {
+          "index": 172,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B10-0655"
+        },
+        "35802.24": {
+          "index": 173,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B10-0948"
+        },
+        "35802.25": {
+          "index": 174,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0011"
+        },
+        "35802.26": {
+          "index": 175,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0015"
+        },
+        "35802.27": {
+          "index": 176,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0037"
+        },
+        "35802.28": {
+          "index": 177,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0038"
+        },
+        "35802.29": {
+          "index": 178,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0053"
+        },
+        "35802.30": {
+          "index": 179,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0202"
+        },
+        "35802.31": {
+          "index": 180,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0206"
+        },
+        "35802.32": {
+          "index": 181,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0208"
+        },
+        "35802.33": {
+          "index": 182,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0210"
+        },
+        "35802.34": {
+          "index": 183,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0239"
+        },
+        "35802.35": {
+          "index": 184,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0240"
+        },
+        "35802.98": {
+          "index": 185,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0245"
+        },
+        "35802.37": {
+          "index": 186,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0473"
+        },
+        "35802.38": {
+          "index": 187,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0604"
+        },
+        "35802.39": {
+          "index": 188,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0611"
+        },
+        "35802.40": {
+          "index": 189,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0612"
+        },
+        "35802.41": {
+          "index": 190,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0613"
+        },
+        "35802.42": {
+          "index": 191,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B11-0616"
+        },
+        "35802.43": {
+          "index": 192,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0002"
+        },
+        "35802.44": {
+          "index": 193,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0025"
+        },
+        "35802.45": {
+          "index": 194,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0028"
+        },
+        "35802.46": {
+          "index": 195,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0219"
+        },
+        "35802.47": {
+          "index": 196,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0228"
+        },
+        "35802.48": {
+          "index": 197,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0230"
+        },
+        "35802.94": {
+          "index": 198,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0232"
+        },
+        "35802.97": {
+          "index": 199,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0233"
+        },
+        "35802.96": {
+          "index": 200,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0234"
+        },
+        "35802.52": {
+          "index": 201,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0235"
+        },
+        "35802.53": {
+          "index": 202,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0238"
+        },
+        "35802.54": {
+          "index": 203,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0240"
+        },
+        "35802.55": {
+          "index": 204,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0241"
+        },
+        "35802.95": {
+          "index": 205,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0242"
+        },
+        "35802.57": {
+          "index": 206,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0243"
+        },
+        "35802.58": {
+          "index": 207,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0250"
+        },
+        "35802.59": {
+          "index": 208,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0252"
+        },
+        "35802.60": {
+          "index": 209,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0256"
+        },
+        "35802.61": {
+          "index": 210,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0266"
+        },
+        "35802.62": {
+          "index": 211,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0268"
+        },
+        "35802.63": {
+          "index": 212,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0270"
+        },
+        "35802.64": {
+          "index": 213,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0271"
+        },
+        "35802.65": {
+          "index": 214,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0275"
+        },
+        "35802.66": {
+          "index": 215,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0276"
+        },
+        "35802.67": {
+          "index": 216,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0277"
+        },
+        "35802.68": {
+          "index": 217,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0359"
+        },
+        "35802.69": {
+          "index": 218,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0360"
+        },
+        "35802.70": {
+          "index": 219,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0361"
+        },
+        "35802.71": {
+          "index": 220,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0364"
+        },
+        "35802.72": {
+          "index": 221,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0389"
+        },
+        "35802.73": {
+          "index": 222,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0390"
+        },
+        "35802.74": {
+          "index": 223,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0425"
+        },
+        "35802.75": {
+          "index": 224,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0429"
+        },
+        "35802.76": {
+          "index": 225,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0431"
+        },
+        "35802.77": {
+          "index": 226,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0570"
+        },
+        "35802.78": {
+          "index": 227,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0578"
+        },
+        "35802.79": {
+          "index": 228,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0583"
+        },
+        "35802.80": {
+          "index": 229,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0585"
+        },
+        "35802.81": {
+          "index": 230,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0587"
+        },
+        "35802.82": {
+          "index": 231,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0599"
+        },
+        "35802.83": {
+          "index": 232,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B12-0602"
+        },
+        "35802.92": {
+          "index": 233,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B89-0941"
+        },
+        "35802.93": {
+          "index": 234,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B89-0944"
+        },
+        "35802.84": {
+          "index": 235,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B93-0005"
+        },
+        "35802.85": {
+          "index": 236,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B93-0054"
+        },
+        "35802.86": {
+          "index": 237,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B93-0073"
+        },
+        "35802.87": {
+          "index": 238,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B93-0077"
+        },
+        "35802.88": {
+          "index": 239,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B93-0131"
+        },
+        "35802.89": {
+          "index": 240,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B93-0710"
+        },
+        "35802.90": {
+          "index": 241,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B93-1191"
+        },
+        "35802.91": {
+          "index": 242,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. B93-1449"
+        },
+        "1210451.3": {
+          "index": 243,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. BCB013"
+        },
+        "1210446.3": {
+          "index": 244,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. BCB027"
+        },
+        "1051060.3": {
+          "index": 245,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. NI016"
+        },
+        "1051061.3": {
+          "index": 246,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. NI021"
+        },
+        "1051062.3": {
+          "index": 247,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. NI259"
+        },
+        "1051055.3": {
+          "index": 248,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. NI435a"
+        },
+        "1051056.3": {
+          "index": 249,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. NI474"
+        },
+        "1051057.3": {
+          "index": 250,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. NI486"
+        },
+        "1051058.3": {
+          "index": 251,
+          "status": 2,
+          "label": "Brucella abortus bv. 1 str. NI488"
+        },
+        "644332.5": {
+          "index": 252,
+          "status": 2,
+          "label": "Brucella abortus bv. 2 str. 02-0039"
+        },
+        "644332.6": {
+          "index": 253,
+          "status": 2,
+          "label": "Brucella abortus bv. 2 str. 02-0040"
+        },
+        "644332.7": {
+          "index": 254,
+          "status": 2,
+          "label": "Brucella abortus bv. 2 str. 02-0041"
+        },
+        "644332.8": {
+          "index": 255,
+          "status": 2,
+          "label": "Brucella abortus bv. 2 str. 02-0120"
+        },
+        "644332.9": {
+          "index": 256,
+          "status": 2,
+          "label": "Brucella abortus bv. 2 str. 02-0284"
+        },
+        "644332.3": {
+          "index": 257,
+          "status": 2,
+          "label": "Brucella abortus bv. 2 str. B04-0074"
+        },
+        "644332.4": {
+          "index": 258,
+          "status": 2,
+          "label": "Brucella abortus bv. 2 str. B93-0608"
+        },
+        "1210450.3": {
+          "index": 259,
+          "status": 2,
+          "label": "Brucella abortus bv. 2 str. BCB034"
+        },
+        "644335.12": {
+          "index": 260,
+          "status": 2,
+          "label": "Brucella abortus bv. 4 str. 12-0332S2"
+        },
+        "644335.3": {
+          "index": 261,
+          "status": 2,
+          "label": "Brucella abortus bv. 4 str. B04-0344"
+        },
+        "644335.4": {
+          "index": 262,
+          "status": 2,
+          "label": "Brucella abortus bv. 4 str. B05-0022"
+        },
+        "644335.5": {
+          "index": 263,
+          "status": 2,
+          "label": "Brucella abortus bv. 4 str. B05-0338"
+        },
+        "644335.6": {
+          "index": 264,
+          "status": 2,
+          "label": "Brucella abortus bv. 4 str. B08-0665"
+        },
+        "644335.7": {
+          "index": 265,
+          "status": 2,
+          "label": "Brucella abortus bv. 4 str. B08-0666"
+        },
+        "644335.8": {
+          "index": 266,
+          "status": 2,
+          "label": "Brucella abortus bv. 4 str. B09-0009"
+        },
+        "644335.11": {
+          "index": 267,
+          "status": 2,
+          "label": "Brucella abortus bv. 4 str. B12-0332"
+        },
+        "644335.10": {
+          "index": 268,
+          "status": 2,
+          "label": "Brucella abortus bv. 4 str. B12-0333"
+        },
+        "1160201.3": {
+          "index": 269,
+          "status": 2,
+          "label": "Brucella abortus levi gila"
+        },
+        "235.36": {
+          "index": 270,
+          "status": 2,
+          "label": "Brucella abortus strain 1046"
+        },
+        "235.32": {
+          "index": 271,
+          "status": 2,
+          "label": "Brucella abortus strain 11796"
+        },
+        "235.34": {
+          "index": 272,
+          "status": 2,
+          "label": "Brucella abortus strain 12183"
+        },
+        "235.33": {
+          "index": 273,
+          "status": 2,
+          "label": "Brucella abortus strain 1365.1"
+        },
+        "235.110": {
+          "index": 274,
+          "status": 2,
+          "label": "Brucella abortus strain 14330"
+        },
+        "235.101": {
+          "index": 275,
+          "status": 2,
+          "label": "Brucella abortus strain 149279"
+        },
+        "235.40": {
+          "index": 276,
+          "status": 2,
+          "label": "Brucella abortus strain 15074.1"
+        },
+        "235.102": {
+          "index": 277,
+          "status": 2,
+          "label": "Brucella abortus strain 15500"
+        },
+        "235.106": {
+          "index": 278,
+          "status": 2,
+          "label": "Brucella abortus strain 21614"
+        },
+        "235.105": {
+          "index": 279,
+          "status": 2,
+          "label": "Brucella abortus strain 21630"
+        },
+        "235.98": {
+          "index": 280,
+          "status": 2,
+          "label": "Brucella abortus strain 28375"
+        },
+        "235.37": {
+          "index": 281,
+          "status": 2,
+          "label": "Brucella abortus strain 3272"
+        },
+        "235.103": {
+          "index": 282,
+          "status": 2,
+          "label": "Brucella abortus strain 33295"
+        },
+        "235.107": {
+          "index": 283,
+          "status": 2,
+          "label": "Brucella abortus strain 38127"
+        },
+        "235.94": {
+          "index": 284,
+          "status": 2,
+          "label": "Brucella abortus strain 40046"
+        },
+        "235.97": {
+          "index": 285,
+          "status": 2,
+          "label": "Brucella abortus strain 49188"
+        },
+        "235.95": {
+          "index": 286,
+          "status": 2,
+          "label": "Brucella abortus strain 49839"
+        },
+        "235.38": {
+          "index": 287,
+          "status": 2,
+          "label": "Brucella abortus strain 5586"
+        },
+        "235.100": {
+          "index": 288,
+          "status": 2,
+          "label": "Brucella abortus strain 57750"
+        },
+        "235.96": {
+          "index": 289,
+          "status": 2,
+          "label": "Brucella abortus strain 67761"
+        },
+        "235.99": {
+          "index": 290,
+          "status": 2,
+          "label": "Brucella abortus strain 69103"
+        },
+        "235.108": {
+          "index": 291,
+          "status": 2,
+          "label": "Brucella abortus strain 72871"
+        },
+        "235.104": {
+          "index": 292,
+          "status": 2,
+          "label": "Brucella abortus strain 7863"
+        },
+        "235.109": {
+          "index": 293,
+          "status": 2,
+          "label": "Brucella abortus strain 84573"
+        },
+        "235.31": {
+          "index": 294,
+          "status": 2,
+          "label": "Brucella abortus strain 8486"
+        },
+        "235.35": {
+          "index": 295,
+          "status": 2,
+          "label": "Brucella abortus strain 8979.3"
+        },
+        "235.39": {
+          "index": 296,
+          "status": 2,
+          "label": "Brucella abortus strain 9060"
+        },
+        "235.41": {
+          "index": 297,
+          "status": 2,
+          "label": "Brucella abortus strain 9261"
+        },
+        "235.111": {
+          "index": 298,
+          "status": 2,
+          "label": "Brucella abortus strain 9510"
+        },
+        "235.29": {
+          "index": 299,
+          "status": 2,
+          "label": "Brucella abortus strain BAB8416"
+        },
+        "235.92": {
+          "index": 300,
+          "status": 2,
+          "label": "Brucella abortus strain BD"
+        },
+        "235.77": {
+          "index": 301,
+          "status": 2,
+          "label": "Brucella abortus strain Br.a-1236-10-Geo"
+        },
+        "235.80": {
+          "index": 302,
+          "status": 2,
+          "label": "Brucella abortus strain Br.a-1238-10-Geo"
+        },
+        "235.79": {
+          "index": 303,
+          "status": 2,
+          "label": "Brucella abortus strain Br.a-1247/10-Geo"
+        },
+        "235.74": {
+          "index": 304,
+          "status": 2,
+          "label": "Brucella abortus strain Br.a-1549/11-Geo"
+        },
+        "235.76": {
+          "index": 305,
+          "status": 2,
+          "label": "Brucella abortus strain Br.a-1844/12/12-Geo"
+        },
+        "235.75": {
+          "index": 306,
+          "status": 2,
+          "label": "Brucella abortus strain Br.a-1910/13-2013-Geo"
+        },
+        "235.78": {
+          "index": 307,
+          "status": 2,
+          "label": "Brucella abortus strain Br.a-375-10-Geo"
+        },
+        "235.93": {
+          "index": 308,
+          "status": 2,
+          "label": "Brucella abortus strain MC"
+        },
+        "235.28": {
+          "index": 309,
+          "status": 2,
+          "label": "Brucella abortus strain S19per_mutant"
+        },
+        "235.72": {
+          "index": 310,
+          "status": 2,
+          "label": "Brucella abortus strain SKN01"
+        },
+        "235.30": {
+          "index": 311,
+          "status": 2,
+          "label": "Brucella abortus strain SKN13"
+        },
+        "1341684.3": {
+          "index": 312,
+          "status": 2,
+          "label": "Brucella canis 04-2330-1"
+        },
+        "1229903.3": {
+          "index": 313,
+          "status": 2,
+          "label": "Brucella canis 118"
+        },
+        "1169222.3": {
+          "index": 314,
+          "status": 2,
+          "label": "Brucella canis 79/122"
+        },
+        "1341685.3": {
+          "index": 315,
+          "status": 2,
+          "label": "Brucella canis 96-7258"
+        },
+        "1210445.3": {
+          "index": 316,
+          "status": 2,
+          "label": "Brucella canis BCB018"
+        },
+        "1198686.3": {
+          "index": 317,
+          "status": 2,
+          "label": "Brucella canis CNGB 1172"
+        },
+        "1198684.3": {
+          "index": 318,
+          "status": 2,
+          "label": "Brucella canis CNGB 1324"
+        },
+        "1198685.4": {
+          "index": 319,
+          "status": 2,
+          "label": "Brucella canis CNGB 513"
+        },
+        "1198699.3": {
+          "index": 320,
+          "status": 2,
+          "label": "Brucella canis F7/05A"
+        },
+        "1104321.3": {
+          "index": 321,
+          "status": 2,
+          "label": "Brucella canis HSK A52141"
+        },
+        "1198696.3": {
+          "index": 322,
+          "status": 2,
+          "label": "Brucella canis UK10/02"
+        },
+        "1408887.3": {
+          "index": 323,
+          "status": 2,
+          "label": "Brucella canis str. Oliveri"
+        },
+        "36855.27": {
+          "index": 324,
+          "status": 2,
+          "label": "Brucella canis strain 2009004498"
+        },
+        "36855.29": {
+          "index": 325,
+          "status": 2,
+          "label": "Brucella canis strain 2009013648"
+        },
+        "36855.28": {
+          "index": 326,
+          "status": 2,
+          "label": "Brucella canis strain 2010009751"
+        },
+        "36855.12": {
+          "index": 327,
+          "status": 2,
+          "label": "Brucella canis strain SCL"
+        },
+        "36855.33": {
+          "index": 328,
+          "status": 2,
+          "label": "Brucella canis strain SVA10"
+        },
+        "36855.3": {
+          "index": 329,
+          "status": 2,
+          "label": "Brucella canis strain SVA13"
+        },
+        "1423891.3": {
+          "index": 330,
+          "status": 2,
+          "label": "Brucella ceti TE10759-12"
+        },
+        "1407053.3": {
+          "index": 331,
+          "status": 2,
+          "label": "Brucella ceti TE28753-12"
+        },
+        "120577.6": {
+          "index": 332,
+          "status": 2,
+          "label": "Brucella ceti strain CRO350"
+        },
+        "1341686.3": {
+          "index": 333,
+          "status": 2,
+          "label": "Brucella melitensis 02-5863-1"
+        },
+        "1388745.3": {
+          "index": 334,
+          "status": 2,
+          "label": "Brucella melitensis 02-7258"
+        },
+        "1266367.3": {
+          "index": 335,
+          "status": 2,
+          "label": "Brucella melitensis 043"
+        },
+        "1388740.3": {
+          "index": 336,
+          "status": 2,
+          "label": "Brucella melitensis 11-1823-3434"
+        },
+        "1143190.3": {
+          "index": 337,
+          "status": 2,
+          "label": "Brucella melitensis 16M1W"
+        },
+        "1457189.3": {
+          "index": 338,
+          "status": 2,
+          "label": "Brucella melitensis 548"
+        },
+        "1160220.3": {
+          "index": 339,
+          "status": 2,
+          "label": "Brucella melitensis 64/150"
+        },
+        "1160224.3": {
+          "index": 340,
+          "status": 2,
+          "label": "Brucella melitensis 66/59"
+        },
+        "1351836.3": {
+          "index": 341,
+          "status": 2,
+          "label": "Brucella melitensis ADMAS-G1"
+        },
+        "1247411.3": {
+          "index": 342,
+          "status": 2,
+          "label": "Brucella melitensis B115"
+        },
+        "1169223.3": {
+          "index": 343,
+          "status": 2,
+          "label": "Brucella melitensis BG2 (S27)"
+        },
+        "1198679.3": {
+          "index": 344,
+          "status": 2,
+          "label": "Brucella melitensis CNGB 1076"
+        },
+        "1198680.3": {
+          "index": 345,
+          "status": 2,
+          "label": "Brucella melitensis CNGB 1120"
+        },
+        "1198681.3": {
+          "index": 346,
+          "status": 2,
+          "label": "Brucella melitensis CNGB 290"
+        },
+        "1160219.3": {
+          "index": 347,
+          "status": 2,
+          "label": "Brucella melitensis F1/06 B10"
+        },
+        "1160211.3": {
+          "index": 348,
+          "status": 2,
+          "label": "Brucella melitensis F10/05-2"
+        },
+        "1169224.3": {
+          "index": 349,
+          "status": 2,
+          "label": "Brucella melitensis F10/06-16"
+        },
+        "1244532.3": {
+          "index": 350,
+          "status": 2,
+          "label": "Brucella melitensis F15/06-7"
+        },
+        "1160226.3": {
+          "index": 351,
+          "status": 2,
+          "label": "Brucella melitensis F2/06-6"
+        },
+        "1160210.3": {
+          "index": 352,
+          "status": 2,
+          "label": "Brucella melitensis F3/02"
+        },
+        "1160215.3": {
+          "index": 353,
+          "status": 2,
+          "label": "Brucella melitensis F5/07-239A"
+        },
+        "1169225.3": {
+          "index": 354,
+          "status": 2,
+          "label": "Brucella melitensis F6/05-6"
+        },
+        "1160225.3": {
+          "index": 355,
+          "status": 2,
+          "label": "Brucella melitensis F8/01-155"
+        },
+        "1169226.3": {
+          "index": 356,
+          "status": 2,
+          "label": "Brucella melitensis F9/05"
+        },
+        "1210452.3": {
+          "index": 357,
+          "status": 2,
+          "label": "Brucella melitensis M5-10"
+        },
+        "1029825.4": {
+          "index": 358,
+          "status": 2,
+          "label": "Brucella melitensis NI"
+        },
+        "1160218.3": {
+          "index": 359,
+          "status": 2,
+          "label": "Brucella melitensis R3/07-2"
+        },
+        "1148757.3": {
+          "index": 360,
+          "status": 2,
+          "label": "Brucella melitensis S66"
+        },
+        "1160217.3": {
+          "index": 361,
+          "status": 2,
+          "label": "Brucella melitensis UK14/06"
+        },
+        "1160223.3": {
+          "index": 362,
+          "status": 2,
+          "label": "Brucella melitensis UK19/04"
+        },
+        "1160214.3": {
+          "index": 363,
+          "status": 2,
+          "label": "Brucella melitensis UK22/04"
+        },
+        "1160221.3": {
+          "index": 364,
+          "status": 2,
+          "label": "Brucella melitensis UK22/06"
+        },
+        "1160213.3": {
+          "index": 365,
+          "status": 2,
+          "label": "Brucella melitensis UK23/06"
+        },
+        "1169227.3": {
+          "index": 366,
+          "status": 2,
+          "label": "Brucella melitensis UK29/05"
+        },
+        "1169228.3": {
+          "index": 367,
+          "status": 2,
+          "label": "Brucella melitensis UK3/06"
+        },
+        "1169229.3": {
+          "index": 368,
+          "status": 2,
+          "label": "Brucella melitensis UK31/99"
+        },
+        "1160216.3": {
+          "index": 369,
+          "status": 2,
+          "label": "Brucella melitensis UK37/05"
+        },
+        "1160222.3": {
+          "index": 370,
+          "status": 2,
+          "label": "Brucella melitensis Uk24/06"
+        },
+        "1229906.3": {
+          "index": 371,
+          "status": 2,
+          "label": "Brucella melitensis bv. 1 str. 133"
+        },
+        "224914.51": {
+          "index": 372,
+          "status": 2,
+          "label": "Brucella melitensis bv. 1 str. 16M"
+        },
+        "1210447.3": {
+          "index": 373,
+          "status": 2,
+          "label": "Brucella melitensis bv. 1 str. BCB028"
+        },
+        "1210449.3": {
+          "index": 374,
+          "status": 2,
+          "label": "Brucella melitensis bv. 1 str. BCB033"
+        },
+        "1004956.3": {
+          "index": 375,
+          "status": 2,
+          "label": "Brucella melitensis bv. 1 str. M28-12"
+        },
+        "520465.6": {
+          "index": 376,
+          "status": 2,
+          "label": "Brucella melitensis bv. 2 str. 63/9"
+        },
+        "1229904.3": {
+          "index": 377,
+          "status": 2,
+          "label": "Brucella melitensis bv. 3 str. 128"
+        },
+        "29459.399": {
+          "index": 378,
+          "status": 2,
+          "label": "Brucella melitensis strain 2007BM/1"
+        },
+        "29459.159": {
+          "index": 379,
+          "status": 2,
+          "label": "Brucella melitensis strain 2008724259"
+        },
+        "29459.158": {
+          "index": 380,
+          "status": 2,
+          "label": "Brucella melitensis strain 2010724553"
+        },
+        "29459.51": {
+          "index": 381,
+          "status": 2,
+          "label": "Brucella melitensis strain 20236"
+        },
+        "29459.388": {
+          "index": 382,
+          "status": 2,
+          "label": "Brucella melitensis strain BL"
+        },
+        "29459.381": {
+          "index": 383,
+          "status": 2,
+          "label": "Brucella melitensis strain BMM 13/15"
+        },
+        "29459.380": {
+          "index": 384,
+          "status": 2,
+          "label": "Brucella melitensis strain BMM 15/15"
+        },
+        "29459.382": {
+          "index": 385,
+          "status": 2,
+          "label": "Brucella melitensis strain BMM 19/15"
+        },
+        "29459.379": {
+          "index": 386,
+          "status": 2,
+          "label": "Brucella melitensis strain BMM26/15"
+        },
+        "29459.137": {
+          "index": 387,
+          "status": 2,
+          "label": "Brucella melitensis strain BRUC048"
+        },
+        "29459.138": {
+          "index": 388,
+          "status": 2,
+          "label": "Brucella melitensis strain BRUC101"
+        },
+        "29459.387": {
+          "index": 389,
+          "status": 2,
+          "label": "Brucella melitensis strain BY38"
+        },
+        "29459.197": {
+          "index": 390,
+          "status": 2,
+          "label": "Brucella melitensis strain Br.m-1252/10-Geo"
+        },
+        "29459.198": {
+          "index": 391,
+          "status": 2,
+          "label": "Brucella melitensis strain Br.m-1268/11-Geo"
+        },
+        "29459.196": {
+          "index": 392,
+          "status": 2,
+          "label": "Brucella melitensis strain Br.m-1771/12-Geo"
+        },
+        "29459.14": {
+          "index": 393,
+          "status": 2,
+          "label": "Brucella melitensis strain C-554"
+        },
+        "29459.15": {
+          "index": 394,
+          "status": 2,
+          "label": "Brucella melitensis strain C-555"
+        },
+        "29459.16": {
+          "index": 395,
+          "status": 2,
+          "label": "Brucella melitensis strain C-558"
+        },
+        "29459.44": {
+          "index": 396,
+          "status": 2,
+          "label": "Brucella melitensis strain C-567"
+        },
+        "29459.47": {
+          "index": 397,
+          "status": 2,
+          "label": "Brucella melitensis strain C-568"
+        },
+        "29459.48": {
+          "index": 398,
+          "status": 2,
+          "label": "Brucella melitensis strain C-569"
+        },
+        "29459.45": {
+          "index": 399,
+          "status": 2,
+          "label": "Brucella melitensis strain C-570"
+        },
+        "29459.46": {
+          "index": 400,
+          "status": 2,
+          "label": "Brucella melitensis strain C-571"
+        },
+        "29459.49": {
+          "index": 401,
+          "status": 2,
+          "label": "Brucella melitensis strain C-572"
+        },
+        "29459.50": {
+          "index": 402,
+          "status": 2,
+          "label": "Brucella melitensis strain C-573"
+        },
+        "29459.43": {
+          "index": 403,
+          "status": 2,
+          "label": "Brucella melitensis strain Human/CT/US/1995"
+        },
+        "29459.157": {
+          "index": 404,
+          "status": 2,
+          "label": "Brucella melitensis strain KU/RCF-03"
+        },
+        "29459.153": {
+          "index": 405,
+          "status": 2,
+          "label": "Brucella melitensis strain KU/RCF-31"
+        },
+        "29459.154": {
+          "index": 406,
+          "status": 2,
+          "label": "Brucella melitensis strain KU/RCF-64"
+        },
+        "29459.152": {
+          "index": 407,
+          "status": 2,
+          "label": "Brucella melitensis strain KU/RCF-84"
+        },
+        "29459.151": {
+          "index": 408,
+          "status": 2,
+          "label": "Brucella melitensis strain KU/RCF-96"
+        },
+        "29459.31": {
+          "index": 409,
+          "status": 2,
+          "label": "Brucella melitensis strain MY1483/09"
+        },
+        "29459.104": {
+          "index": 410,
+          "status": 2,
+          "label": "Brucella melitensis strain Phil1136/12"
+        },
+        "29459.401": {
+          "index": 411,
+          "status": 2,
+          "label": "Brucella melitensis strain QH61 strain abortion"
+        },
+        "29459.383": {
+          "index": 412,
+          "status": 2,
+          "label": "Brucella melitensis strain QY1"
+        },
+        "29459.199": {
+          "index": 413,
+          "status": 2,
+          "label": "Brucella melitensis strain SKN25"
+        },
+        "29459.386": {
+          "index": 414,
+          "status": 2,
+          "label": "Brucella melitensis strain VRI 4799/15"
+        },
+        "29459.385": {
+          "index": 415,
+          "status": 2,
+          "label": "Brucella melitensis strain VRI 6530/11"
+        },
+        "29459.384": {
+          "index": 416,
+          "status": 2,
+          "label": "Brucella melitensis strain VRI 6856/11"
+        },
+        "1169230.3": {
+          "index": 417,
+          "status": 2,
+          "label": "Brucella ovis 63/96"
+        },
+        "1169231.3": {
+          "index": 418,
+          "status": 2,
+          "label": "Brucella ovis 80/125"
+        },
+        "1169232.3": {
+          "index": 419,
+          "status": 2,
+          "label": "Brucella ovis 81/8"
+        },
+        "444178.3": {
+          "index": 420,
+          "status": 2,
+          "label": "Brucella ovis ATCC 25840"
+        },
+        "1198678.3": {
+          "index": 421,
+          "status": 2,
+          "label": "Brucella ovis F8/05B"
+        },
+        "1293920.3": {
+          "index": 422,
+          "status": 2,
+          "label": "Brucella ovis IntaBari-1993-758"
+        },
+        "1293918.3": {
+          "index": 423,
+          "status": 2,
+          "label": "Brucella ovis IntaBari-2001-319-4082"
+        },
+        "1293917.3": {
+          "index": 424,
+          "status": 2,
+          "label": "Brucella ovis IntaBari-2001-319-5096"
+        },
+        "1293916.3": {
+          "index": 425,
+          "status": 2,
+          "label": "Brucella ovis IntaBari-2002-82-58"
+        },
+        "1293922.3": {
+          "index": 426,
+          "status": 2,
+          "label": "Brucella ovis IntaBari-2006-46-332"
+        },
+        "1293921.3": {
+          "index": 427,
+          "status": 2,
+          "label": "Brucella ovis IntaBari-2006-46-348"
+        },
+        "1293919.3": {
+          "index": 428,
+          "status": 2,
+          "label": "Brucella ovis IntaBari-2008-114-542"
+        },
+        "1293912.3": {
+          "index": 429,
+          "status": 2,
+          "label": "Brucella ovis IntaBari-2009-88-3"
+        },
+        "1293913.3": {
+          "index": 430,
+          "status": 2,
+          "label": "Brucella ovis IntaBari-2009-88-4"
+        },
+        "1293914.3": {
+          "index": 431,
+          "status": 2,
+          "label": "Brucella ovis IntaBari-2010-47-268"
+        },
+        "1293915.3": {
+          "index": 432,
+          "status": 2,
+          "label": "Brucella ovis IntaBari-2010-47-871"
+        },
+        "1341688.3": {
+          "index": 433,
+          "status": 2,
+          "label": "Brucella sp. 04-5288"
+        },
+        "1891098.3": {
+          "index": 434,
+          "status": 2,
+          "label": "Brucella sp. 2002734562"
+        },
+        "1169234.3": {
+          "index": 435,
+          "status": 2,
+          "label": "Brucella sp. 56/94"
+        },
+        "1160235.3": {
+          "index": 436,
+          "status": 2,
+          "label": "Brucella sp. 63/311"
+        },
+        "1867845.3": {
+          "index": 437,
+          "status": 2,
+          "label": "Brucella sp. B13-0095"
+        },
+        "1906855.3": {
+          "index": 438,
+          "status": 2,
+          "label": "Brucella sp. CMUL 010"
+        },
+        "1906856.3": {
+          "index": 439,
+          "status": 2,
+          "label": "Brucella sp. CMUL 013"
+        },
+        "1906857.3": {
+          "index": 440,
+          "status": 2,
+          "label": "Brucella sp. CMUL 018"
+        },
+        "437670.3": {
+          "index": 441,
+          "status": 2,
+          "label": "Brucella sp. F23/97"
+        },
+        "1169233.3": {
+          "index": 442,
+          "status": 2,
+          "label": "Brucella sp. F5/06"
+        },
+        "437687.3": {
+          "index": 443,
+          "status": 2,
+          "label": "Brucella sp. F8/99"
+        },
+        "437671.3": {
+          "index": 444,
+          "status": 2,
+          "label": "Brucella sp. F96/2"
+        },
+        "693748.4": {
+          "index": 445,
+          "status": 2,
+          "label": "Brucella sp. NF 2653"
+        },
+        "437663.3": {
+          "index": 446,
+          "status": 2,
+          "label": "Brucella sp. UK1/97"
+        },
+        "1160234.3": {
+          "index": 447,
+          "status": 2,
+          "label": "Brucella sp. UK38/05"
+        },
+        "437684.3": {
+          "index": 448,
+          "status": 2,
+          "label": "Brucella sp. UK40/99"
+        },
+        "437685.3": {
+          "index": 449,
+          "status": 2,
+          "label": "Brucella sp. UK5/01"
+        },
+        "1170703.3": {
+          "index": 450,
+          "status": 2,
+          "label": "Brucella suis 01-5744"
+        },
+        "1171378.5": {
+          "index": 451,
+          "status": 2,
+          "label": "Brucella suis 019"
+        },
+        "1171378.3": {
+          "index": 452,
+          "status": 2,
+          "label": "Brucella suis 019"
+        },
+        "1388743.3": {
+          "index": 453,
+          "status": 2,
+          "label": "Brucella suis 04-0115"
+        },
+        "1388744.3": {
+          "index": 454,
+          "status": 2,
+          "label": "Brucella suis 06-791-1309"
+        },
+        "1388739.3": {
+          "index": 455,
+          "status": 2,
+          "label": "Brucella suis 06-988-1656"
+        },
+        "1388742.3": {
+          "index": 456,
+          "status": 2,
+          "label": "Brucella suis 06-997-1672"
+        },
+        "1160227.3": {
+          "index": 457,
+          "status": 2,
+          "label": "Brucella suis 63/198"
+        },
+        "1160232.3": {
+          "index": 458,
+          "status": 2,
+          "label": "Brucella suis 63/252"
+        },
+        "1160228.3": {
+          "index": 459,
+          "status": 2,
+          "label": "Brucella suis 63/261"
+        },
+        "1160233.3": {
+          "index": 460,
+          "status": 2,
+          "label": "Brucella suis 92/29"
+        },
+        "1160230.3": {
+          "index": 461,
+          "status": 2,
+          "label": "Brucella suis 92/63"
+        },
+        "1198695.3": {
+          "index": 462,
+          "status": 2,
+          "label": "Brucella suis 94/11"
+        },
+        "1388741.3": {
+          "index": 463,
+          "status": 2,
+          "label": "Brucella suis 97-9757"
+        },
+        "1198683.3": {
+          "index": 464,
+          "status": 2,
+          "label": "Brucella suis CNGB 247"
+        },
+        "1198682.3": {
+          "index": 465,
+          "status": 2,
+          "label": "Brucella suis CNGB 786"
+        },
+        "1160229.3": {
+          "index": 466,
+          "status": 2,
+          "label": "Brucella suis F12/02"
+        },
+        "1198694.3": {
+          "index": 467,
+          "status": 2,
+          "label": "Brucella suis F4/06-146"
+        },
+        "1169237.3": {
+          "index": 468,
+          "status": 2,
+          "label": "Brucella suis F5/03-2"
+        },
+        "1169236.3": {
+          "index": 469,
+          "status": 2,
+          "label": "Brucella suis F5/05-10"
+        },
+        "1169238.3": {
+          "index": 470,
+          "status": 2,
+          "label": "Brucella suis F5/05-4"
+        },
+        "1169239.3": {
+          "index": 471,
+          "status": 2,
+          "label": "Brucella suis F7/06-1"
+        },
+        "1169240.3": {
+          "index": 472,
+          "status": 2,
+          "label": "Brucella suis F7/06-2"
+        },
+        "1169241.3": {
+          "index": 473,
+          "status": 2,
+          "label": "Brucella suis F7/06-5"
+        },
+        "1169242.3": {
+          "index": 474,
+          "status": 2,
+          "label": "Brucella suis F8/06-1"
+        },
+        "1160231.3": {
+          "index": 475,
+          "status": 2,
+          "label": "Brucella suis F8/06-2"
+        },
+        "1169243.3": {
+          "index": 476,
+          "status": 2,
+          "label": "Brucella suis F8/06-3"
+        },
+        "1169244.3": {
+          "index": 477,
+          "status": 2,
+          "label": "Brucella suis F9/06-1"
+        },
+        "1210453.3": {
+          "index": 478,
+          "status": 2,
+          "label": "Brucella suis S2-30"
+        },
+        "644346.3": {
+          "index": 479,
+          "status": 2,
+          "label": "Brucella suis bv. 1 str. B06-0059"
+        },
+        "644346.4": {
+          "index": 480,
+          "status": 2,
+          "label": "Brucella suis bv. 1 str. B10-0144"
+        },
+        "644346.5": {
+          "index": 481,
+          "status": 2,
+          "label": "Brucella suis bv. 1 str. B10-1082"
+        },
+        "644346.6": {
+          "index": 482,
+          "status": 2,
+          "label": "Brucella suis bv. 1 str. B12-0577"
+        },
+        "644346.7": {
+          "index": 483,
+          "status": 2,
+          "label": "Brucella suis bv. 1 str. B99-1007"
+        },
+        "1210444.3": {
+          "index": 484,
+          "status": 2,
+          "label": "Brucella suis bv. 1 str. BCB025"
+        },
+        "1004954.6": {
+          "index": 485,
+          "status": 2,
+          "label": "Brucella suis bv. 1 str. S2"
+        },
+        "1210448.3": {
+          "index": 486,
+          "status": 2,
+          "label": "Brucella suis bv. 2 str. BCB032"
+        },
+        "645170.29": {
+          "index": 487,
+          "status": 2,
+          "label": "Brucella suis bv. 2 strain Bs143CITA"
+        },
+        "645170.30": {
+          "index": 488,
+          "status": 2,
+          "label": "Brucella suis bv. 2 strain Bs364CITA"
+        },
+        "645170.31": {
+          "index": 489,
+          "status": 2,
+          "label": "Brucella suis bv. 2 strain Bs396CITA"
+        },
+        "645170.27": {
+          "index": 490,
+          "status": 2,
+          "label": "Brucella suis bv. 2 strain PT09143"
+        },
+        "645170.28": {
+          "index": 491,
+          "status": 2,
+          "label": "Brucella suis bv. 2 strain PT09172"
+        },
+        "520488.3": {
+          "index": 492,
+          "status": 2,
+          "label": "Brucella suis bv. 4 str. 40"
+        },
+        "29461.52": {
+          "index": 493,
+          "status": 2,
+          "label": "Brucella suis strain 2004000578"
+        },
+        "29461.11": {
+          "index": 494,
+          "status": 2,
+          "label": "Brucella suis strain 513UK"
+        },
+        "29461.21": {
+          "index": 495,
+          "status": 2,
+          "label": "Brucella suis strain Human/AR/US/1981"
+        },
+        "29461.55": {
+          "index": 496,
+          "status": 2,
+          "label": "Brucella suis strain QH05"
+        }
+      },
+      "clusterRowOrder": [],
+      "clusterColumnOrder": [],
+      "keyword": "",
+      "perfectFamMatch": "A",
+      "min_member_count": null,
+      "max_member_count": null,
+      "min_genome_count": null,
+      "max_genome_count": null
+    },
+    {
+      "token": ""
+    }
+  ],
+  "jsonrpc": "2.0"
+}
