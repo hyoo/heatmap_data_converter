@@ -61,8 +61,8 @@ function runConverter(dataset, output_format) {
         
         row_node.name = "FAMILY: " + family.family_id;
         //row_node.ini = families.length - i;
-        row_node.clust = families.length - i;
-        row_node.rank = i;
+        row_node.clust = families.length - i + 1;
+        row_node.rank = i + 1;
         //todo - determine rankvar better
         //row_node.rankvar = i + 1;
         row_node["cat-0"] = "FAMILY NAME: " + family.description;
@@ -87,10 +87,10 @@ function runConverter(dataset, output_format) {
 
         col_node.name = "Genome: " + genome;
         //col_node.ini = numberGenomes - index;
-        col_node.clust = numberGenomes - index;
+        col_node.clust = numberGenomes - index + 1;
 
         //TODO - improve rank
-        col_node.rank = index;
+        col_node.rank = index + 1;
 
         col_node["cat-0"] = "NAME " + genomes_set[genome].label;
         //col_node["cat_0_index"] = index;
@@ -99,10 +99,22 @@ function runConverter(dataset, output_format) {
     }
 
     for (let i = 0, len = families.length; i < len; i++) {
+
         const family = families[i];
         var genomes_count = family.genomes;
         var mat = genomes_count.match(/.{1,2}/g);
-        // console.log("Mat: " + mat);
+
+        var isHex = false;
+        for (let j = 0; j < mat.length; j++) {
+
+            var regex = /[a-z]/i;
+            this.isHex = regex.test(mat[j]);
+            
+            if (this.isHex) {
+                mat[j] = parseInt(mat[j], 16);
+                mat[j] = mat[j].toString();
+            }
+        }
 
         clustergrammerdata.mat.push(mat);
     }

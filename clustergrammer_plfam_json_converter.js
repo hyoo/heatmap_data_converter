@@ -111,10 +111,22 @@ function runConverter(dataset, output_format) {
     // }
 
     for (let i = 0, len = families.length; i < len; i++) {
+
         const family = families[i];
         var genomes_count = family.genomes;
         var mat = genomes_count.match(/.{1,2}/g);
-        // console.log("Mat: " + mat);
+
+        var isHex = false;
+        for (let j = 0; j < mat.length; j++) {
+
+            var regex = /[a-z]/i;
+            this.isHex = regex.test(mat[j]);
+            
+            if (this.isHex) {
+                mat[j] = parseInt(mat[j], 16);
+                mat[j] = mat[j].toString();
+            }
+        }
 
         clustergrammerdata.mat.push(mat);
     }
