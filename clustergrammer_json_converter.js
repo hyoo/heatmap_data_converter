@@ -87,7 +87,7 @@ function runConverter(dataset, output_format) {
 
         col_node.name = "Genome: " + genome;
         //col_node.ini = numberGenomes - index;
-        col_node.clust = numberGenomes - index + 1;
+        col_node.clust = numberGenomes - index;
 
         //TODO - improve rank
         col_node.rank = index + 1;
@@ -111,8 +111,13 @@ function runConverter(dataset, output_format) {
             this.isHex = regex.test(mat[j]);
             
             if (this.isHex) {
+                //deal with base 16, convert all numbers to base 10 int
                 mat[j] = parseInt(mat[j], 16);
                 mat[j] = mat[j].toString();
+                mat[j] = parseInt(mat[j], 10);
+            } else {
+                //string to int
+                mat[j] = parseInt(mat[j], 10);
             }
         }
 

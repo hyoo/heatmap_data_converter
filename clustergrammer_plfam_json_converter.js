@@ -87,29 +87,6 @@ function runConverter(dataset, output_format) {
         clustergrammerdata.col_nodes.push(col_node);
     }
 
-    // for (var genome in genomes_set) {
-    //     var col_node = {};
-
-    //     // console.log(genomes_set)
-    //     // console.log(genome)
-    //     var index = genomes_set[genome].index;
-    //     // console.log("Index: " + index);
-    //     // console.log(genomes_set[genome])
-    //     // console.log('----------')
-
-    //     col_node.name = "Genome: " + genome;
-    //     //col_node.ini = numberGenomes - index;
-    //     col_node.clust = numberGenomes - index;
-
-    //     //TODO - improve rank
-    //     col_node.rank = index;
-
-    //     col_node["cat-0"] = "NAME " + genomes_set[genome].label;
-    //     //col_node["cat_0_index"] = index;
-
-    //     clustergrammerdata.col_nodes.push(col_node);
-    // }
-
     for (let i = 0, len = families.length; i < len; i++) {
 
         const family = families[i];
