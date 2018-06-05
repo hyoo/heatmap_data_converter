@@ -4,6 +4,15 @@ const fs = require('fs-extra')
 const process = require('process')
 const opts = require('commander')
 
+var jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+const {document} = (new JSDOM('<!doctype html><html><body></body></html>')).window;
+global.document = document;
+global.window = document.defaultView;
+
+
+jquery = require("jquery"); 
+
 if (require.main === module) {
 
     opts.option('-d, --dataset [value]', 'Dataset name: micro, small, medium, large')
@@ -15,10 +24,53 @@ if (require.main === module) {
         opts.help()
     }
 
-    runConverter(opts.dataset, opts.output_format || 'simple')
+    const req_body = fs.readJsonSync(`req.${opts.dataset}.json`, {encoding: 'utf8'})
+    const genomes_set = req_body.params[0].genomeFilterStatus;
+
+    //curl -X POST -H 'Content-Type:application/solrquery+x-www-form-urlencoded' -H 'Accept:application/json' 'https://p3.theseed.org/services/data_api/genome/' -d 'q=genome_id:("1170703.3" OR "1171378.5")&fl=genome_id,genome_name,host_name,isolation_country' > metadata.json
+    const request_genome_ids = req_body.params[0].genomeIds;
+    const request_data = request_genome_ids.join(" OR ")
+    console.log(request_data)
+    
+    // jquery.ajax({
+    //     type: "POST",
+    //     url: "https://p3.theseed.org/services/data_api/genome/",
+    //     contentType: "application/solrquery+x-www-form-urlencoded",
+    //     data: request_data
+    // }).done(function( data ) {
+    //     console.log(data)
+    //     runConverter(opts.dataset, opts.output_format || 'simple', data)
+    // });
+
+    // jquery.ajax({
+    //     type: "POST",
+    //     url: "https://p3.theseed.org/services/data_api/genome/",
+    //     contentType: "application/solrquery+x-www-form-urlencoded",
+    //     data: request_data,
+    //     success: success
+    // });
+
+    jquery( "div.foo" ).click(function() {
+      jquery( "span", this ).addClass( "bar" );
+    });
+    
+    jquery.ajax({
+        type: "POST",
+        url: "https://p3.theseed.org/services/data_api/genome/",
+        contentType: "application/solrquery+x-www-form-urlencoded",
+        data: request_data, 
+        success: success
+    })
+
+    function success(data) {
+        console.log(data)
+        runConverter(opts.dataset, opts.output_format || 'simple', data)
+    }
+
+    // runConverter(opts.dataset, opts.output_format || 'simple')
 }
 
-function runConverter(dataset, output_format) {
+function runConverter(dataset, output_format, genomes_metadata) {
 
     //dataset = micro, large, etc. 
 
@@ -31,9 +83,22 @@ function runConverter(dataset, output_format) {
     } catch (ex) {
         console.log(ex.message)
     }
-    debugger;
     const req_body = fs.readJsonSync(`req.${dataset}.json`, {encoding: 'utf8'})
-    const genomes_set = req_body.params[0].genomeFilterStatus
+    const genomes_set = req_body.params[0].genomeFilterStatus;
+
+    // //curl -X POST -H 'Content-Type:application/solrquery+x-www-form-urlencoded' -H 'Accept:application/json' 'https://p3.theseed.org/services/data_api/genome/' -d 'q=genome_id:("1170703.3" OR "1171378.5")&fl=genome_id,genome_name,host_name,isolation_country' > metadata.json
+    // const request_genome_ids = req_body.params[0].genomeIds;
+    // const request_data = request_genome_ids.join(" OR ")
+    
+    // $.ajax({
+    //     method: "POST",
+    //     url: "https://p3.theseed.org/services/data_api/genome/",
+    //     contentType: "application/solrquery+x-www-form-urlencoded",
+    //     data: { request_data }
+    // }).done(function( data ) {
+    //     console.log(data)
+    // });
+    //const genomes_metadata = fs.readJsonSync(`metadata.json`, {encoding: 'utf8'})
 
     //array of genomes "1004954.6", "520487.6", "29461.21"
     const genomes = Object.keys(genomes_set)
@@ -73,17 +138,24 @@ function runConverter(dataset, output_format) {
     }
 
     const numberGenomes = Object.keys(genomes_set).length;
-    console.log("number of genomes: " + numberGenomes);
 
     for (var genome in genomes_set) {
+
         var col_node = {};
 
-        // console.log(genomes_set)
-        // console.log(genome)
+        var that = this;
         var index = genomes_set[genome].index;
-        // console.log("Index: " + index);
-        // console.log(genomes_set[genome])
-        // console.log('----------')
+
+        for (var i = 0; i < genomes_metadata.length; i++) {
+
+            var genome_data = genomes_metadata[i];
+                        
+            if (genome_data.genome_id === genome) {
+                that.genome_metadata = genome_data;
+                break;
+            }
+        }
+
 
         col_node.name = "Genome: " + genome;
         //col_node.ini = numberGenomes - index;
@@ -92,11 +164,72 @@ function runConverter(dataset, output_format) {
         //TODO - improve rank
         col_node.rank = index + 1;
 
-        col_node["cat-0"] = "NAME " + genomes_set[genome].label;
+        col_node["cat-0"] = "Name: " + genomes_set[genome].label;
+
+        if (that.genome_metadata.hasOwnProperty('isolation_country')) {
+            col_node["cat-1"] = "Isolation Country: " + that.genome_metadata.isolation_country;
+        } else {
+            col_node["cat-1"] = "Isolation Country: n/a"
+        }
+
+        if (that.genome_metadata.hasOwnProperty('host_name')) {
+            col_node["cat-2"] = "Host Name: " + that.genome_metadata.host_name;
+        } else {
+            col_node["cat-2"] = "Host Name: n/a"
+        }
+
+        if (that.genome_metadata.hasOwnProperty('genome_group')) {
+            col_node["cat-3"] = "Genome Group: " + that.genome_metadata.genome_group;
+        } else {
+             col_node["cat-3"] = "Genome Group: n/a"
+        }
+
         //col_node["cat_0_index"] = index;
 
         clustergrammerdata.col_nodes.push(col_node);
     }
+
+    // for (var genome in genomes_set) {
+
+    //     var col_node = {};
+
+    //     var that = this;
+    //     var index = genomes_set[genome].index;
+
+    //     const genome_metadata = genomes_metadata[genome];
+    //     console.log(genome_metadata)
+
+    //     col_node.name = "Genome: " + genome;
+    //     //col_node.ini = numberGenomes - index;
+    //     col_node.clust = numberGenomes - index;
+
+    //     //TODO - improve rank
+    //     col_node.rank = index + 1;
+
+    //     col_node["Name"] = genomes_set[genome].label;
+
+    //     if (genome_metadata.hasOwnProperty('isolation_country')) {
+    //         col_node["Isolation Country"] = genome_metadata.isolation_country;
+    //     } else {
+    //         col_node["Isolation Country"] = "n/a"
+    //     }
+
+    //     if (genome_metadata.hasOwnProperty('host_name')) {
+    //         col_node["Host Name"] = genome_metadata.host_name;
+    //     } else {
+    //         col_node["Host Name"] = "n/a"
+    //     }
+
+    //     if (genome_metadata.hasOwnProperty('genome_group')) {
+    //         col_node["Genome Group"] = genome_metadata.genome_group;
+    //     } else {
+    //          col_node["Genome Group"] = "n/a"
+    //     }
+
+    //     //col_node["cat_0_index"] = index;
+
+    //     clustergrammerdata.col_nodes.push(col_node);
+    // }
 
     for (let i = 0, len = families.length; i < len; i++) {
 

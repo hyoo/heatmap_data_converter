@@ -1,1 +1,328 @@
-{"id":3,"method":"proteinFamily","params":[{"familyType":"pgfam","heatmapAxis":"","genomeIds":["1170703.3","1171378.5","1171378.3","204722.22","204722.5","204722.15","1160227.3","1160232.3","1160228.3","1160233.3","1160230.3","1198683.3","1198682.3","1160229.3","1169237.3","1169236.3","1169238.3","1169239.3","1169240.3","1169241.3","1169242.3","1160231.3","1169243.3","1169244.3","1210453.3","1112912.3","644346.3","644346.4","644346.5","644346.6","644346.7","1004954.6","1004954.3","645170.29","645170.30","645170.31","645170.27","645170.28","520487.6","520488.3","520488.4","29461.52","29461.54","29461.11","29461.12","29461.8","29461.21","29461.7","29461.9","29461.10"],"genomeFilterStatus":{"1170703.3":{"index":0,"status":2,"label":"Brucella suis 01-5744"},"1171378.5":{"index":1,"status":2,"label":"Brucella suis 019"},"1171378.3":{"index":2,"status":2,"label":"Brucella suis 019"},"204722.22":{"index":3,"status":2,"label":"Brucella suis 1330"},"204722.5":{"index":4,"status":2,"label":"Brucella suis 1330"},"204722.15":{"index":5,"status":2,"label":"Brucella suis 1330"},"1160227.3":{"index":6,"status":2,"label":"Brucella suis 63/198"},"1160232.3":{"index":7,"status":2,"label":"Brucella suis 63/252"},"1160228.3":{"index":8,"status":2,"label":"Brucella suis 63/261"},"1160233.3":{"index":9,"status":2,"label":"Brucella suis 92/29"},"1160230.3":{"index":10,"status":2,"label":"Brucella suis 92/63"},"1198683.3":{"index":11,"status":2,"label":"Brucella suis CNGB 247"},"1198682.3":{"index":12,"status":2,"label":"Brucella suis CNGB 786"},"1160229.3":{"index":13,"status":2,"label":"Brucella suis F12/02"},"1169237.3":{"index":14,"status":2,"label":"Brucella suis F5/03-2"},"1169236.3":{"index":15,"status":2,"label":"Brucella suis F5/05-10"},"1169238.3":{"index":16,"status":2,"label":"Brucella suis F5/05-4"},"1169239.3":{"index":17,"status":2,"label":"Brucella suis F7/06-1"},"1169240.3":{"index":18,"status":2,"label":"Brucella suis F7/06-2"},"1169241.3":{"index":19,"status":2,"label":"Brucella suis F7/06-5"},"1169242.3":{"index":20,"status":2,"label":"Brucella suis F8/06-1"},"1160231.3":{"index":21,"status":2,"label":"Brucella suis F8/06-2"},"1169243.3":{"index":22,"status":2,"label":"Brucella suis F8/06-3"},"1169244.3":{"index":23,"status":2,"label":"Brucella suis F9/06-1"},"1210453.3":{"index":24,"status":2,"label":"Brucella suis S2-30"},"1112912.3":{"index":25,"status":2,"label":"Brucella suis VBI22"},"644346.3":{"index":26,"status":2,"label":"Brucella suis bv. 1 str. B06-0059"},"644346.4":{"index":27,"status":2,"label":"Brucella suis bv. 1 str. B10-0144"},"644346.5":{"index":28,"status":2,"label":"Brucella suis bv. 1 str. B10-1082"},"644346.6":{"index":29,"status":2,"label":"Brucella suis bv. 1 str. B12-0577"},"644346.7":{"index":30,"status":2,"label":"Brucella suis bv. 1 str. B99-1007"},"1004954.6":{"index":31,"status":2,"label":"Brucella suis bv. 1 str. S2"},"1004954.3":{"index":32,"status":2,"label":"Brucella suis bv. 1 str. S2"},"645170.29":{"index":33,"status":2,"label":"Brucella suis bv. 2 strain Bs143CITA"},"645170.30":{"index":34,"status":2,"label":"Brucella suis bv. 2 strain Bs364CITA"},"645170.31":{"index":35,"status":2,"label":"Brucella suis bv. 2 strain Bs396CITA"},"645170.27":{"index":36,"status":2,"label":"Brucella suis bv. 2 strain PT09143"},"645170.28":{"index":37,"status":2,"label":"Brucella suis bv. 2 strain PT09172"},"520487.6":{"index":38,"status":2,"label":"Brucella suis bv. 3 str. 686"},"520488.3":{"index":39,"status":2,"label":"Brucella suis bv. 4 str. 40"},"520488.4":{"index":40,"status":2,"label":"Brucella suis bv. 4 str. 40"},"29461.52":{"index":41,"status":2,"label":"Brucella suis strain 2004000578"},"29461.54":{"index":42,"status":2,"label":"Brucella suis strain 2011017258"},"29461.11":{"index":43,"status":2,"label":"Brucella suis strain 513UK"},"29461.12":{"index":44,"status":2,"label":"Brucella suis strain BSP"},"29461.8":{"index":45,"status":2,"label":"Brucella suis strain BSQ"},"29461.21":{"index":46,"status":2,"label":"Brucella suis strain Human/AR/US/1981"},"29461.7":{"index":47,"status":2,"label":"Brucella suis strain Thompsen"},"29461.9":{"index":48,"status":2,"label":"Brucella suis strain ZW043"},"29461.10":{"index":49,"status":2,"label":"Brucella suis strain ZW046"}},"clusterRowOrder":[],"clusterColumnOrder":[],"keyword":"","perfectFamMatch":"A","min_member_count":null,"max_member_count":null,"min_genome_count":null,"max_genome_count":null},{"token":""}],"jsonrpc":"2.0"}
+{
+	"id": 3,
+	"jsonrpc": "2.0",
+	"method": "proteinFamily",
+	"params": [
+		{
+			"clusterColumnOrder": [
+			],
+			"clusterRowOrder": [
+			],
+			"familyType": "pgfam",
+			"genomeFilterStatus": {
+				"1004954.3": {
+					"index": 32,
+					"label": "Brucella suis bv. 1 str. S2",
+					"status": 2
+				},
+				"1004954.6": {
+					"index": 31,
+					"label": "Brucella suis bv. 1 str. S2",
+					"status": 2
+				},
+				"1112912.3": {
+					"index": 25,
+					"label": "Brucella suis VBI22",
+					"status": 2
+				},
+				"1160227.3": {
+					"index": 6,
+					"label": "Brucella suis 63/198",
+					"status": 2
+				},
+				"1160228.3": {
+					"index": 8,
+					"label": "Brucella suis 63/261",
+					"status": 2
+				},
+				"1160229.3": {
+					"index": 13,
+					"label": "Brucella suis F12/02",
+					"status": 2
+				},
+				"1160230.3": {
+					"index": 10,
+					"label": "Brucella suis 92/63",
+					"status": 2
+				},
+				"1160231.3": {
+					"index": 21,
+					"label": "Brucella suis F8/06-2",
+					"status": 2
+				},
+				"1160232.3": {
+					"index": 7,
+					"label": "Brucella suis 63/252",
+					"status": 2
+				},
+				"1160233.3": {
+					"index": 9,
+					"label": "Brucella suis 92/29",
+					"status": 2
+				},
+				"1169236.3": {
+					"index": 15,
+					"label": "Brucella suis F5/05-10",
+					"status": 2
+				},
+				"1169237.3": {
+					"index": 14,
+					"label": "Brucella suis F5/03-2",
+					"status": 2
+				},
+				"1169238.3": {
+					"index": 16,
+					"label": "Brucella suis F5/05-4",
+					"status": 2
+				},
+				"1169239.3": {
+					"index": 17,
+					"label": "Brucella suis F7/06-1",
+					"status": 2
+				},
+				"1169240.3": {
+					"index": 18,
+					"label": "Brucella suis F7/06-2",
+					"status": 2
+				},
+				"1169241.3": {
+					"index": 19,
+					"label": "Brucella suis F7/06-5",
+					"status": 2
+				},
+				"1169242.3": {
+					"index": 20,
+					"label": "Brucella suis F8/06-1",
+					"status": 2
+				},
+				"1169243.3": {
+					"index": 22,
+					"label": "Brucella suis F8/06-3",
+					"status": 2
+				},
+				"1169244.3": {
+					"index": 23,
+					"label": "Brucella suis F9/06-1",
+					"status": 2
+				},
+				"1170703.3": {
+					"index": 0,
+					"label": "Brucella suis 01-5744",
+					"status": 2
+				},
+				"1171378.3": {
+					"index": 2,
+					"label": "Brucella suis 019",
+					"status": 2
+				},
+				"1171378.5": {
+					"index": 1,
+					"label": "Brucella suis 019",
+					"status": 2
+				},
+				"1198682.3": {
+					"index": 12,
+					"label": "Brucella suis CNGB 786",
+					"status": 2
+				},
+				"1198683.3": {
+					"index": 11,
+					"label": "Brucella suis CNGB 247",
+					"status": 2
+				},
+				"1210453.3": {
+					"index": 24,
+					"label": "Brucella suis S2-30",
+					"status": 2
+				},
+				"204722.15": {
+					"index": 5,
+					"label": "Brucella suis 1330",
+					"status": 2
+				},
+				"204722.22": {
+					"index": 3,
+					"label": "Brucella suis 1330",
+					"status": 2
+				},
+				"204722.5": {
+					"index": 4,
+					"label": "Brucella suis 1330",
+					"status": 2
+				},
+				"29461.10": {
+					"index": 49,
+					"label": "Brucella suis strain ZW046",
+					"status": 2
+				},
+				"29461.11": {
+					"index": 43,
+					"label": "Brucella suis strain 513UK",
+					"status": 2
+				},
+				"29461.12": {
+					"index": 44,
+					"label": "Brucella suis strain BSP",
+					"status": 2
+				},
+				"29461.21": {
+					"index": 46,
+					"label": "Brucella suis strain Human/AR/US/1981",
+					"status": 2
+				},
+				"29461.52": {
+					"index": 41,
+					"label": "Brucella suis strain 2004000578",
+					"status": 2
+				},
+				"29461.54": {
+					"index": 42,
+					"label": "Brucella suis strain 2011017258",
+					"status": 2
+				},
+				"29461.7": {
+					"index": 47,
+					"label": "Brucella suis strain Thompsen",
+					"status": 2
+				},
+				"29461.8": {
+					"index": 45,
+					"label": "Brucella suis strain BSQ",
+					"status": 2
+				},
+				"29461.9": {
+					"index": 48,
+					"label": "Brucella suis strain ZW043",
+					"status": 2
+				},
+				"520487.6": {
+					"index": 38,
+					"label": "Brucella suis bv. 3 str. 686",
+					"status": 2
+				},
+				"520488.3": {
+					"index": 39,
+					"label": "Brucella suis bv. 4 str. 40",
+					"status": 2
+				},
+				"520488.4": {
+					"index": 40,
+					"label": "Brucella suis bv. 4 str. 40",
+					"status": 2
+				},
+				"644346.3": {
+					"index": 26,
+					"label": "Brucella suis bv. 1 str. B06-0059",
+					"status": 2
+				},
+				"644346.4": {
+					"index": 27,
+					"label": "Brucella suis bv. 1 str. B10-0144",
+					"status": 2
+				},
+				"644346.5": {
+					"index": 28,
+					"label": "Brucella suis bv. 1 str. B10-1082",
+					"status": 2
+				},
+				"644346.6": {
+					"index": 29,
+					"label": "Brucella suis bv. 1 str. B12-0577",
+					"status": 2
+				},
+				"644346.7": {
+					"index": 30,
+					"label": "Brucella suis bv. 1 str. B99-1007",
+					"status": 2
+				},
+				"645170.27": {
+					"index": 36,
+					"label": "Brucella suis bv. 2 strain PT09143",
+					"status": 2
+				},
+				"645170.28": {
+					"index": 37,
+					"label": "Brucella suis bv. 2 strain PT09172",
+					"status": 2
+				},
+				"645170.29": {
+					"index": 33,
+					"label": "Brucella suis bv. 2 strain Bs143CITA",
+					"status": 2
+				},
+				"645170.30": {
+					"index": 34,
+					"label": "Brucella suis bv. 2 strain Bs364CITA",
+					"status": 2
+				},
+				"645170.31": {
+					"index": 35,
+					"label": "Brucella suis bv. 2 strain Bs396CITA",
+					"status": 2
+				}
+			},
+			"genomeIds": [
+				"1170703.3",
+				"1171378.5",
+				"1171378.3",
+				"204722.22",
+				"204722.5",
+				"204722.15",
+				"1160227.3",
+				"1160232.3",
+				"1160228.3",
+				"1160233.3",
+				"1160230.3",
+				"1198683.3",
+				"1198682.3",
+				"1160229.3",
+				"1169237.3",
+				"1169236.3",
+				"1169238.3",
+				"1169239.3",
+				"1169240.3",
+				"1169241.3",
+				"1169242.3",
+				"1160231.3",
+				"1169243.3",
+				"1169244.3",
+				"1210453.3",
+				"1112912.3",
+				"644346.3",
+				"644346.4",
+				"644346.5",
+				"644346.6",
+				"644346.7",
+				"1004954.6",
+				"1004954.3",
+				"645170.29",
+				"645170.30",
+				"645170.31",
+				"645170.27",
+				"645170.28",
+				"520487.6",
+				"520488.3",
+				"520488.4",
+				"29461.52",
+				"29461.54",
+				"29461.11",
+				"29461.12",
+				"29461.8",
+				"29461.21",
+				"29461.7",
+				"29461.9",
+				"29461.10"
+			],
+			"heatmapAxis": "",
+			"keyword": "",
+			"max_genome_count": null,
+			"max_member_count": null,
+			"min_genome_count": null,
+			"min_member_count": null,
+			"perfectFamMatch": "A"
+		},
+		{
+			"token": ""
+		}
+	]
+}
