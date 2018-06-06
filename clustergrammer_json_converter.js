@@ -10,7 +10,6 @@ const {document} = (new JSDOM('<!doctype html><html><body></body></html>')).wind
 global.document = document;
 global.window = document.defaultView;
 
-
 jquery = require("jquery"); 
 
 if (require.main === module) {
@@ -29,42 +28,45 @@ if (require.main === module) {
 
     //curl -X POST -H 'Content-Type:application/solrquery+x-www-form-urlencoded' -H 'Accept:application/json' 'https://p3.theseed.org/services/data_api/genome/' -d 'q=genome_id:("1170703.3" OR "1171378.5")&fl=genome_id,genome_name,host_name,isolation_country' > metadata.json
     const request_genome_ids = req_body.params[0].genomeIds;
-    const request_data = request_genome_ids.join(" OR ")
-    console.log(request_data)
-    
-    // jquery.ajax({
-    //     type: "POST",
-    //     url: "https://p3.theseed.org/services/data_api/genome/",
-    //     contentType: "application/solrquery+x-www-form-urlencoded",
-    //     data: request_data
-    // }).done(function( data ) {
-    //     console.log(data)
-    //     runConverter(opts.dataset, opts.output_format || 'simple', data)
-    // });
-
-    // jquery.ajax({
-    //     type: "POST",
-    //     url: "https://p3.theseed.org/services/data_api/genome/",
-    //     contentType: "application/solrquery+x-www-form-urlencoded",
-    //     data: request_data,
-    //     success: success
-    // });
-
-    jquery( "div.foo" ).click(function() {
-      jquery( "span", this ).addClass( "bar" );
-    });
+    const request_data = "q=genome_id:(\"" + request_genome_ids.join("\" OR \"") + "\")&fl=genome_id,genome_name,host_name,isolation_country"
+    // console.log(request_data)
+    // console.log('---------------------------------------')
+    // console.log('---------------------------------------')
     
     jquery.ajax({
         type: "POST",
+        accept: "application/json",
         url: "https://p3.theseed.org/services/data_api/genome/",
         contentType: "application/solrquery+x-www-form-urlencoded",
         data: request_data, 
         success: success
     })
 
-    function success(data) {
-        console.log(data)
-        runConverter(opts.dataset, opts.output_format || 'simple', data)
+    function csvJSON(csv){
+      var lines=csv.split("\n");
+      var result = [];
+      var headers=lines[0].split(",");
+
+      for(var i=1;i<lines.length - 1;i++){
+          var obj = {};
+          var currentline=lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
+          currentline = currentline || [];
+          console.log(currentline)
+          for(var j=0;j<headers.length;j++){
+            
+            if (currentline[j]) {
+                currentline[j] = currentline[j].replace(/['"]+/g, '')
+            }
+            obj[headers[j]] = currentline[j];
+          }
+          result.push(obj);
+      }
+      return (result);
+    }
+
+    function success(response) {
+        var jsonData = csvJSON(response);       
+        runConverter(opts.dataset, opts.output_format || 'simple', jsonData)
     }
 
     // runConverter(opts.dataset, opts.output_format || 'simple')
@@ -75,6 +77,7 @@ function runConverter(dataset, output_format, genomes_metadata) {
     //dataset = micro, large, etc. 
 
     console.log(`dataset: ${dataset}, output: ${output_format}`)
+    console.log(genomes_metadata)
 
     // make sure files are exit
     try {
@@ -86,23 +89,7 @@ function runConverter(dataset, output_format, genomes_metadata) {
     const req_body = fs.readJsonSync(`req.${dataset}.json`, {encoding: 'utf8'})
     const genomes_set = req_body.params[0].genomeFilterStatus;
 
-    // //curl -X POST -H 'Content-Type:application/solrquery+x-www-form-urlencoded' -H 'Accept:application/json' 'https://p3.theseed.org/services/data_api/genome/' -d 'q=genome_id:("1170703.3" OR "1171378.5")&fl=genome_id,genome_name,host_name,isolation_country' > metadata.json
-    // const request_genome_ids = req_body.params[0].genomeIds;
-    // const request_data = request_genome_ids.join(" OR ")
-    
-    // $.ajax({
-    //     method: "POST",
-    //     url: "https://p3.theseed.org/services/data_api/genome/",
-    //     contentType: "application/solrquery+x-www-form-urlencoded",
-    //     data: { request_data }
-    // }).done(function( data ) {
-    //     console.log(data)
-    // });
-    //const genomes_metadata = fs.readJsonSync(`metadata.json`, {encoding: 'utf8'})
-
-    //array of genomes "1004954.6", "520487.6", "29461.21"
     const genomes = Object.keys(genomes_set)
-    //int
     const total_genomes = genomes.length
 
     var clustergrammerdata = {};
