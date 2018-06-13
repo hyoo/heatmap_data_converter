@@ -29,9 +29,6 @@ if (require.main === module) {
     //curl -X POST -H 'Content-Type:application/solrquery+x-www-form-urlencoded' -H 'Accept:application/json' 'https://p3.theseed.org/services/data_api/genome/' -d 'q=genome_id:("1170703.3" OR "1171378.5")&fl=genome_id,genome_name,host_name,isolation_country' > metadata.json
     const request_genome_ids = req_body.params[0].genomeIds;
     const request_data = "q=genome_id:(\"" + request_genome_ids.join("\" OR \"") + "\")&fl=genome_id,genome_name,host_name,isolation_country"
-    // console.log(request_data)
-    // console.log('---------------------------------------')
-    // console.log('---------------------------------------')
     
     jquery.ajax({
         type: "POST",
@@ -49,9 +46,9 @@ if (require.main === module) {
 
       for(var i=1;i<lines.length - 1;i++){
           var obj = {};
+          //parse csv and account for possible parenteses inside double quotes
           var currentline=lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
           currentline = currentline || [];
-          console.log(currentline)
           for(var j=0;j<headers.length;j++){
             
             if (currentline[j]) {
@@ -77,7 +74,6 @@ function runConverter(dataset, output_format, genomes_metadata) {
     //dataset = micro, large, etc. 
 
     console.log(`dataset: ${dataset}, output: ${output_format}`)
-    console.log(genomes_metadata)
 
     // make sure files are exit
     try {
@@ -111,13 +107,16 @@ function runConverter(dataset, output_format, genomes_metadata) {
         const family = families[i];
         var row_node = {};
         
-        row_node.name = "FAMILY: " + family.family_id;
+        row_node.name = family.family_id + " - " + family.description;
+        if (i < 5) {
+            console.log(row_node.name)
+        }
         //row_node.ini = families.length - i;
         row_node.clust = families.length - i + 1;
         row_node.rank = i + 1;
         //todo - determine rankvar better
         //row_node.rankvar = i + 1;
-        row_node["cat-0"] = "FAMILY NAME: " + family.description;
+        row_node["cat-0"] = "FAMILY ID: " + family.family_id;
         //todo - determine cat-o index better
         //row_node["cat_0_index"] = i;
 
@@ -144,7 +143,8 @@ function runConverter(dataset, output_format, genomes_metadata) {
         }
 
 
-        col_node.name = "Genome: " + genome;
+        col_node.name = genome + " - " + genomes_set[genome].label;
+
         //col_node.ini = numberGenomes - index;
         col_node.clust = numberGenomes - index;
 
@@ -175,48 +175,6 @@ function runConverter(dataset, output_format, genomes_metadata) {
 
         clustergrammerdata.col_nodes.push(col_node);
     }
-
-    // for (var genome in genomes_set) {
-
-    //     var col_node = {};
-
-    //     var that = this;
-    //     var index = genomes_set[genome].index;
-
-    //     const genome_metadata = genomes_metadata[genome];
-    //     console.log(genome_metadata)
-
-    //     col_node.name = "Genome: " + genome;
-    //     //col_node.ini = numberGenomes - index;
-    //     col_node.clust = numberGenomes - index;
-
-    //     //TODO - improve rank
-    //     col_node.rank = index + 1;
-
-    //     col_node["Name"] = genomes_set[genome].label;
-
-    //     if (genome_metadata.hasOwnProperty('isolation_country')) {
-    //         col_node["Isolation Country"] = genome_metadata.isolation_country;
-    //     } else {
-    //         col_node["Isolation Country"] = "n/a"
-    //     }
-
-    //     if (genome_metadata.hasOwnProperty('host_name')) {
-    //         col_node["Host Name"] = genome_metadata.host_name;
-    //     } else {
-    //         col_node["Host Name"] = "n/a"
-    //     }
-
-    //     if (genome_metadata.hasOwnProperty('genome_group')) {
-    //         col_node["Genome Group"] = genome_metadata.genome_group;
-    //     } else {
-    //          col_node["Genome Group"] = "n/a"
-    //     }
-
-    //     //col_node["cat_0_index"] = index;
-
-    //     clustergrammerdata.col_nodes.push(col_node);
-    // }
 
     for (let i = 0, len = families.length; i < len; i++) {
 
