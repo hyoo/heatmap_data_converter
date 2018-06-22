@@ -220,6 +220,13 @@ function runConverter(dataset, output_format, genomes_metadata) {
         colGenomeIdDictionary[colGenomeId[i]] = i;
     }
 
+    //use counters so that indexes add up when the name is the same
+    var colNameDictionaryCounter = 0;
+    var colIsolationCountryDictionaryCounter = 0;
+    var colHostNameDictionaryCounter = 0;
+    var colGenomeGroupDictionaryCounter = 0;
+    var colGenomeIdDictionaryCounter = 0;
+
     for (var genome in genomes_set) {
 
         var col_node = {};
@@ -265,11 +272,20 @@ function runConverter(dataset, output_format, genomes_metadata) {
 
         col_node["cat-4"] = "Genome ID: " + genome;
 
-        col_node["cat_0_index"] = colNameDictionary[genomes_set[genome].label];
-        col_node["cat_1_index"] = colIsolationCountryDictionary[that.genome_metadata.isolation_country];
-        col_node["cat_2_index"] = colHostNameDictionary[that.genome_metadata.host_name];
-        col_node["cat_3_index"] = colGenomeGroupDictionary[that.genome_metadata.genome_group];
-        col_node["cat_4_index"] = genome;
+        //bugs to FIX - counter method is not working and ensure that iterating over repeated properties works as a +1
+
+        col_node["cat_0_index"] = colNameDictionary[genomes_set[genome].label] + colNameDictionaryCounter;
+        col_node["cat_1_index"] = colIsolationCountryDictionary[that.genome_metadata.isolation_country] + colIsolationCountryDictionaryCounter;
+        col_node["cat_2_index"] = colHostNameDictionary[that.genome_metadata.host_name] + colHostNameDictionaryCounter;
+        col_node["cat_3_index"] = colGenomeGroupDictionary[that.genome_metadata.genome_group] + colGenomeGroupDictionaryCounter;
+        col_node["cat_4_index"] = colGenomeIdDictionary[genome] + colGenomeIdDictionaryCounter;
+
+        //iterate by one. the numbers will not be contiguous, but they will be ordered correctly
+        colNameDictionaryCounter += 1;
+        colIsolationCountryDictionaryCounter += 1;
+        colHostNameDictionaryCounter += 1;
+        colGenomeGroupDictionaryCounter += 1;
+        colGenomeIdDictionaryCounter += 1;
 
         clustergrammerdata.col_nodes.push(col_node);
     }
