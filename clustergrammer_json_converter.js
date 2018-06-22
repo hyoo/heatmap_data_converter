@@ -97,33 +97,128 @@ function runConverter(dataset, output_format, genomes_metadata) {
     const families = res_body.result;
 
     // https://media.readthedocs.org/pdf/clustergrammer/stable/clustergrammer.pdf
-    // row_nodes and col_nodes objects are required to have three properties: name, clust, rank. 
+    // row_nodes and col_nodes objects are required to have three properties: name, clust, rank. name specifies
+    // the name given to the row or column. clust and rank give the ordering of the row or column in the clustergram. Two
+    // optional properties are group and value. group is an array that contains group-membership of the row/column
+    // at different dendrogram distance cutoffs and is necessary for displaying a dendrogram. If nodes have the value
+    // property, then semi-transparent bars will be made behind the labels to represent this value.
+
+    //https://github.com/MaayanLab/clustergrammer-json/blob/master/clustergrammer_example.json
 
     // "name": "ATF7",
     // "clust": 67,
     // "rank": 66,
 
+    //cat-x_index is used for sorting
+
+    //build dictionary to sort through for indexing
+    const rowFamilyIds = [];
+
+    for (let i = 0, len = families.length; i < len; i++) {
+        const family = families[i];
+        rowFamilyIds.push(family.family_id)
+    }
+
+    rowFamilyIds.sort();
+    const rowFamilyIdsDictionary = {};
+
+    for (let i = 0, len = rowFamilyIds.length; i < len; i++) {
+        rowFamilyIdsDictionary[rowFamilyIds[i]] = i;
+    }
+
     for (let i = 0, len = families.length; i < len; i++) {
         const family = families[i];
         var row_node = {};
         
-        row_node.name = family.family_id + " - " + family.description;
-        if (i < 5) {
-            console.log(row_node.name)
-        }
+        row_node.name = family.description;
+       
         //row_node.ini = families.length - i;
         row_node.clust = families.length - i + 1;
         row_node.rank = i + 1;
         //todo - determine rankvar better
         //row_node.rankvar = i + 1;
         row_node["cat-0"] = "FAMILY ID: " + family.family_id;
-        //todo - determine cat-o index better
-        //row_node["cat_0_index"] = i;
+        row_node["cat_0_index"] = rowFamilyIdsDictionary[family.family_id];
 
         clustergrammerdata.row_nodes.push(row_node);
     }
 
     const numberGenomes = Object.keys(genomes_set).length;
+
+    const colName = [];
+    const colIsolationCountry = [];
+    const colHostName = [];
+    const colGenomeGroup = [];
+    const colGenomeId = [];
+
+    for (var genome in genomes_set) {
+        colName.push(genomes_set[genome].label);
+
+        var that = this;
+
+        for (var i = 0; i < genomes_metadata.length; i++) {
+
+            var genome_data = genomes_metadata[i];
+                        
+            if (genome_data.genome_id === genome) {
+                that.genome_metadata = genome_data;
+                break;
+            }
+        }
+
+        if (that.genome_metadata.hasOwnProperty('isolation_country')) {
+            colIsolationCountry.push(that.genome_metadata.isolation_country);
+        } else {
+            colIsolationCountry.push("n/a")
+        }
+
+        if (that.genome_metadata.hasOwnProperty('host_name')) {
+            colHostName.push(that.genome_metadata.host_name);
+        } else {
+            colHostName.push("n/a")
+        }
+
+        if (that.genome_metadata.hasOwnProperty('genome_group')) {
+            colGenomeGroup.push(that.genome_metadata.genome_group);
+        } else {
+            colGenomeGroup.push("n/a")
+        }
+
+        colGenomeId.push(genome);
+
+    }
+
+    colName.sort();
+    colIsolationCountry.sort();
+    colHostName.sort();
+    colGenomeGroup.sort();
+    colGenomeId.sort();
+
+    const colNameDictionary = {};
+    const colIsolationCountryDictionary = {};
+    const colHostNameDictionary = {};
+    const colGenomeGroupDictionary = {};
+    const colGenomeIdDictionary = {};
+
+    for (let i = 0, len = colName.length; i < len; i++) {
+        colNameDictionary[colName[i]] = i;
+    }
+
+    for (let i = 0, len = colIsolationCountry.length; i < len; i++) {
+        colIsolationCountryDictionary[colIsolationCountry[i]] = i;
+    }
+
+    for (let i = 0, len = colHostName.length; i < len; i++) {
+        colHostNameDictionary[colHostName[i]] = i;
+    }
+
+    for (let i = 0, len = colGenomeGroup.length; i < len; i++) {
+        colGenomeGroupDictionary[colGenomeGroup[i]] = i;
+    }
+
+    for (let i = 0, len = colGenomeId.length; i < len; i++) {
+        colGenomeIdDictionary[colGenomeId[i]] = i;
+    }
 
     for (var genome in genomes_set) {
 
@@ -142,10 +237,7 @@ function runConverter(dataset, output_format, genomes_metadata) {
             }
         }
 
-
-        col_node.name = genome + " - " + genomes_set[genome].label;
-
-        //col_node.ini = numberGenomes - index;
+        col_node.name = genomes_set[genome].label;
         col_node.clust = numberGenomes - index;
 
         //TODO - improve rank
@@ -171,7 +263,13 @@ function runConverter(dataset, output_format, genomes_metadata) {
              col_node["cat-3"] = "Genome Group: n/a"
         }
 
-        //col_node["cat_0_index"] = index;
+        col_node["cat-4"] = "Genome ID: " + genome;
+
+        col_node["cat_0_index"] = colNameDictionary[genomes_set[genome].label];
+        col_node["cat_1_index"] = colIsolationCountryDictionary[that.genome_metadata.isolation_country];
+        col_node["cat_2_index"] = colHostNameDictionary[that.genome_metadata.host_name];
+        col_node["cat_3_index"] = colGenomeGroupDictionary[that.genome_metadata.genome_group];
+        col_node["cat_4_index"] = genome;
 
         clustergrammerdata.col_nodes.push(col_node);
     }
