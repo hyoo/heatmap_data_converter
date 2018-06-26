@@ -126,11 +126,20 @@ function runConverter(dataset, output_format, genomes_metadata) {
         rowFamilyIdsDictionary[rowFamilyIds[i]] = i;
     }
 
+    var usedRowNames = {}
+
     for (let i = 0, len = families.length; i < len; i++) {
         const family = families[i];
         var row_node = {};
         
-        row_node.name = family.description;
+        //row name must be unique to render
+        if (!usedRowNames.hasOwnProperty(family.description)) {
+            usedRowNames[family.description] = 1
+            row_node.name = family.description;
+        } else {
+            usedRowNames[family.description] += 1;
+            row_node.name = family.description + " - " + usedRowNames[family.description]
+        }
        
         //row_node.ini = families.length - i;
         row_node.clust = families.length - i + 1;
@@ -201,6 +210,13 @@ function runConverter(dataset, output_format, genomes_metadata) {
     colGenomeGroup.sort();
     colGenomeId.sort();
 
+    //want array to be opposite of alphabetiacl because clustergrammer places 0 index to the right - we want alphabetical to move left to right
+    colName.reverse();
+    colIsolationCountry.reverse();
+    colHostName.reverse();
+    colGenomeGroup.reverse();
+    colGenomeId.reverse();
+
     const colNameDictionary = {};
     const colIsolationCountryDictionary = {};
     const colHostNameDictionary = {};
@@ -242,7 +258,7 @@ function runConverter(dataset, output_format, genomes_metadata) {
         colGenomeIdDictionary[colGenomeId[i]] = data;
     }
 
-    var usedLabelNames = {}
+    var usedColNames = {}
 
     for (var genome in genomes_set) {
 
@@ -263,12 +279,12 @@ function runConverter(dataset, output_format, genomes_metadata) {
 
         //name must be unique or will not render
         
-        if (!usedLabelNames.hasOwnProperty(genomes_set[genome].label)) {
-            usedLabelNames[genomes_set[genome].label] = 1
+        if (!usedColNames.hasOwnProperty(genomes_set[genome].label)) {
+            usedColNames[genomes_set[genome].label] = 1
             col_node.name = genomes_set[genome].label;
         } else {
-            usedLabelNames[genomes_set[genome].label] += 1;
-            col_node.name = genomes_set[genome].label + " - " + usedLabelNames[genomes_set[genome].label]
+            usedColNames[genomes_set[genome].label] += 1;
+            col_node.name = genomes_set[genome].label + " - " + usedColNames[genomes_set[genome].label]
         }
 
         col_node.clust = numberGenomes - index;
