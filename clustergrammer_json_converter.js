@@ -158,31 +158,38 @@ function runConverter(dataset, output_format, genomes_metadata) {
 
         for (var i = 0; i < genomes_metadata.length; i++) {
 
+            //randomize stubbed data for now
+            //Math.random() * (max - min) + min
+            var min = Math.ceil(0);
+            var max = Math.floor(10);
+            var randomNumber = Math.floor(Math.random() * (max - min)) + min; 
+
+            genomes_metadata[i].genome_group = randomNumber;
             var genome_data = genomes_metadata[i];
                         
             if (genome_data.genome_id === genome) {
+
+                //need all properties for indexing purposes
+                if (!genome_data.hasOwnProperty('isolation_country')) {
+                    genome_data.isolation_country = "n/a"
+                } 
+
+                if (!genome_data.hasOwnProperty('host_name')) {
+                    genome_data.host_name = "n/a"
+                } 
+
+                if (!genome_data.hasOwnProperty('genome_group')) {
+                    genome_data.genome_group = "n/a"
+                } 
+
                 that.genome_metadata = genome_data;
                 break;
             }
         }
 
-        if (that.genome_metadata.hasOwnProperty('isolation_country')) {
-            colIsolationCountry.push(that.genome_metadata.isolation_country);
-        } else {
-            colIsolationCountry.push("n/a")
-        }
-
-        if (that.genome_metadata.hasOwnProperty('host_name')) {
-            colHostName.push(that.genome_metadata.host_name);
-        } else {
-            colHostName.push("n/a")
-        }
-
-        if (that.genome_metadata.hasOwnProperty('genome_group')) {
-            colGenomeGroup.push(that.genome_metadata.genome_group);
-        } else {
-            colGenomeGroup.push("n/a")
-        }
+        colIsolationCountry.push(that.genome_metadata.isolation_country);
+        colHostName.push(that.genome_metadata.host_name);
+        colGenomeGroup.push(that.genome_metadata.genome_group);
 
         colGenomeId.push(genome);
 
@@ -201,31 +208,39 @@ function runConverter(dataset, output_format, genomes_metadata) {
     const colGenomeIdDictionary = {};
 
     for (let i = 0, len = colName.length; i < len; i++) {
-        colNameDictionary[colName[i]] = i;
+        var data = {};
+        data.baseIndex = i;
+        data.counter = 0;
+        colNameDictionary[colName[i]] = data;
     }
 
     for (let i = 0, len = colIsolationCountry.length; i < len; i++) {
-        colIsolationCountryDictionary[colIsolationCountry[i]] = i;
+        var data = {};
+        data.baseIndex = i;
+        data.counter = 0;
+        colIsolationCountryDictionary[colIsolationCountry[i]] = data;
     }
 
     for (let i = 0, len = colHostName.length; i < len; i++) {
-        colHostNameDictionary[colHostName[i]] = i;
+        var data = {};
+        data.baseIndex = i;
+        data.counter = 0;
+        colHostNameDictionary[colHostName[i]] = data;
     }
 
     for (let i = 0, len = colGenomeGroup.length; i < len; i++) {
-        colGenomeGroupDictionary[colGenomeGroup[i]] = i;
+        var data = {};
+        data.baseIndex = i;
+        data.counter = 0;
+        colGenomeGroupDictionary[colGenomeGroup[i]] = data;
     }
 
     for (let i = 0, len = colGenomeId.length; i < len; i++) {
-        colGenomeIdDictionary[colGenomeId[i]] = i;
+        var data = {};
+        data.baseIndex = i;
+        data.counter = 0;
+        colGenomeIdDictionary[colGenomeId[i]] = data;
     }
-
-    //use counters so that indexes add up when the name is the same
-    var colNameDictionaryCounter = 0;
-    var colIsolationCountryDictionaryCounter = 0;
-    var colHostNameDictionaryCounter = 0;
-    var colGenomeGroupDictionaryCounter = 0;
-    var colGenomeIdDictionaryCounter = 0;
 
     for (var genome in genomes_set) {
 
@@ -272,20 +287,23 @@ function runConverter(dataset, output_format, genomes_metadata) {
 
         col_node["cat-4"] = "Genome ID: " + genome;
 
-        //bugs to FIX - counter method is not working and ensure that iterating over repeated properties works as a +1
 
-        col_node["cat_0_index"] = colNameDictionary[genomes_set[genome].label] + colNameDictionaryCounter;
-        col_node["cat_1_index"] = colIsolationCountryDictionary[that.genome_metadata.isolation_country] + colIsolationCountryDictionaryCounter;
-        col_node["cat_2_index"] = colHostNameDictionary[that.genome_metadata.host_name] + colHostNameDictionaryCounter;
-        col_node["cat_3_index"] = colGenomeGroupDictionary[that.genome_metadata.genome_group] + colGenomeGroupDictionaryCounter;
-        col_node["cat_4_index"] = colGenomeIdDictionary[genome] + colGenomeIdDictionaryCounter;
+        // console.log(colGenomeGroupDictionary[that.genome_metadata.genome_group])
+        // console.log(colGenomeGroupDictionary)
+        console.log(that.genome_metadata)
 
-        //iterate by one. the numbers will not be contiguous, but they will be ordered correctly
-        colNameDictionaryCounter += 1;
-        colIsolationCountryDictionaryCounter += 1;
-        colHostNameDictionaryCounter += 1;
-        colGenomeGroupDictionaryCounter += 1;
-        colGenomeIdDictionaryCounter += 1;
+
+        col_node["cat_0_index"] = colNameDictionary[genomes_set[genome].label].baseIndex + colNameDictionary[genomes_set[genome].label].counter;
+        col_node["cat_1_index"] = colIsolationCountryDictionary[that.genome_metadata.isolation_country].baseIndex + colIsolationCountryDictionary[that.genome_metadata.isolation_country].counter;
+        col_node["cat_2_index"] = colHostNameDictionary[that.genome_metadata.host_name].baseIndex + colHostNameDictionary[that.genome_metadata.host_name].counter;
+        col_node["cat_3_index"] = colGenomeGroupDictionary[that.genome_metadata.genome_group].baseIndex + colGenomeGroupDictionary[that.genome_metadata.genome_group].baseIndex.counter;
+        col_node["cat_4_index"] = colGenomeIdDictionary[genome].baseIndex + colGenomeIdDictionary[genome].counter;
+
+        colNameDictionary[genomes_set[genome].label].counter += 1;
+        colIsolationCountryDictionary[that.genome_metadata.isolation_country].counter += 1;
+        colHostNameDictionary[that.genome_metadata.host_name].counter += 1;
+        colGenomeGroupDictionary[that.genome_metadata.genome_group].counter += 1;
+        colGenomeIdDictionary[genome].counter += 1;
 
         clustergrammerdata.col_nodes.push(col_node);
     }
