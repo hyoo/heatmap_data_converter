@@ -161,7 +161,7 @@ function runConverter(dataset, output_format, genomes_metadata) {
             //randomize stubbed data for now
             //Math.random() * (max - min) + min
             var min = Math.ceil(0);
-            var max = Math.floor(10);
+            var max = Math.floor(3);
             var randomNumber = Math.floor(Math.random() * (max - min)) + min; 
 
             genomes_metadata[i].genome_group = randomNumber;
@@ -242,6 +242,8 @@ function runConverter(dataset, output_format, genomes_metadata) {
         colGenomeIdDictionary[colGenomeId[i]] = data;
     }
 
+    var usedLabelNames = {}
+
     for (var genome in genomes_set) {
 
         var col_node = {};
@@ -259,7 +261,16 @@ function runConverter(dataset, output_format, genomes_metadata) {
             }
         }
 
-        col_node.name = genomes_set[genome].label;
+        //name must be unique or will not render
+        
+        if (!usedLabelNames.hasOwnProperty(genomes_set[genome].label)) {
+            usedLabelNames[genomes_set[genome].label] = 1
+            col_node.name = genomes_set[genome].label;
+        } else {
+            usedLabelNames[genomes_set[genome].label] += 1;
+            col_node.name = genomes_set[genome].label + " - " + usedLabelNames[genomes_set[genome].label]
+        }
+
         col_node.clust = numberGenomes - index;
 
         //TODO - improve rank
@@ -287,16 +298,10 @@ function runConverter(dataset, output_format, genomes_metadata) {
 
         col_node["cat-4"] = "Genome ID: " + genome;
 
-
-        // console.log(colGenomeGroupDictionary[that.genome_metadata.genome_group])
-        // console.log(colGenomeGroupDictionary)
-        console.log(that.genome_metadata)
-
-
         col_node["cat_0_index"] = colNameDictionary[genomes_set[genome].label].baseIndex + colNameDictionary[genomes_set[genome].label].counter;
         col_node["cat_1_index"] = colIsolationCountryDictionary[that.genome_metadata.isolation_country].baseIndex + colIsolationCountryDictionary[that.genome_metadata.isolation_country].counter;
         col_node["cat_2_index"] = colHostNameDictionary[that.genome_metadata.host_name].baseIndex + colHostNameDictionary[that.genome_metadata.host_name].counter;
-        col_node["cat_3_index"] = colGenomeGroupDictionary[that.genome_metadata.genome_group].baseIndex + colGenomeGroupDictionary[that.genome_metadata.genome_group].baseIndex.counter;
+        col_node["cat_3_index"] = colGenomeGroupDictionary[that.genome_metadata.genome_group].baseIndex + colGenomeGroupDictionary[that.genome_metadata.genome_group].counter;
         col_node["cat_4_index"] = colGenomeIdDictionary[genome].baseIndex + colGenomeIdDictionary[genome].counter;
 
         colNameDictionary[genomes_set[genome].label].counter += 1;
