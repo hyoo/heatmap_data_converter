@@ -158,7 +158,7 @@ function runConverter(dataset, output_format, genomes_metadata) {
     const colIsolationCountry = [];
     const colHostName = [];
     const colGenomeGroup = [];
-    const colGenomeId = [];
+    //const colGenomeId = [];
 
     for (var genome in genomes_set) {
         colName.push(genomes_set[genome].label);
@@ -200,7 +200,7 @@ function runConverter(dataset, output_format, genomes_metadata) {
         colHostName.push(that.genome_metadata.host_name);
         colGenomeGroup.push(that.genome_metadata.genome_group);
 
-        colGenomeId.push(genome);
+        //colGenomeId.push(genome);
 
     }
 
@@ -208,20 +208,20 @@ function runConverter(dataset, output_format, genomes_metadata) {
     colIsolationCountry.sort();
     colHostName.sort();
     colGenomeGroup.sort();
-    colGenomeId.sort();
+    //colGenomeId.sort();
 
     //want array to be opposite of alphabetiacl because clustergrammer places 0 index to the right - we want alphabetical to move left to right
     colName.reverse();
     colIsolationCountry.reverse();
     colHostName.reverse();
     colGenomeGroup.reverse();
-    colGenomeId.reverse();
+    //colGenomeId.reverse();
 
     const colNameDictionary = {};
     const colIsolationCountryDictionary = {};
     const colHostNameDictionary = {};
     const colGenomeGroupDictionary = {};
-    const colGenomeIdDictionary = {};
+    //const colGenomeIdDictionary = {};
 
     for (let i = 0, len = colName.length; i < len; i++) {
         var data = {};
@@ -251,12 +251,12 @@ function runConverter(dataset, output_format, genomes_metadata) {
         colGenomeGroupDictionary[colGenomeGroup[i]] = data;
     }
 
-    for (let i = 0, len = colGenomeId.length; i < len; i++) {
-        var data = {};
-        data.baseIndex = i;
-        data.counter = 1;
-        colGenomeIdDictionary[colGenomeId[i]] = data;
-    }
+    // for (let i = 0, len = colGenomeId.length; i < len; i++) {
+    //     var data = {};
+    //     data.baseIndex = i;
+    //     data.counter = 1;
+    //     colGenomeIdDictionary[colGenomeId[i]] = data;
+    // }
 
     var usedColNames = {}
 
@@ -278,7 +278,6 @@ function runConverter(dataset, output_format, genomes_metadata) {
         }
 
         //name must be unique or will not render
-        
         if (!usedColNames.hasOwnProperty(genomes_set[genome].label)) {
             usedColNames[genomes_set[genome].label] = 1
             col_node.name = genomes_set[genome].label;
@@ -312,19 +311,19 @@ function runConverter(dataset, output_format, genomes_metadata) {
              col_node["cat-3"] = "Genome Group: n/a"
         }
 
-        col_node["cat-4"] = "Genome ID: " + genome;
+        // col_node["cat-4"] = "Genome ID: " + genome;
 
         col_node["cat_0_index"] = colNameDictionary[genomes_set[genome].label].baseIndex - colNameDictionary[genomes_set[genome].label].counter;
         col_node["cat_1_index"] = colIsolationCountryDictionary[that.genome_metadata.isolation_country].baseIndex - colIsolationCountryDictionary[that.genome_metadata.isolation_country].counter;
         col_node["cat_2_index"] = colHostNameDictionary[that.genome_metadata.host_name].baseIndex - colHostNameDictionary[that.genome_metadata.host_name].counter;
         col_node["cat_3_index"] = colGenomeGroupDictionary[that.genome_metadata.genome_group].baseIndex - colGenomeGroupDictionary[that.genome_metadata.genome_group].counter;
-        col_node["cat_4_index"] = colGenomeIdDictionary[genome].baseIndex - colGenomeIdDictionary[genome].counter;
+        // col_node["cat_4_index"] = colGenomeIdDictionary[genome].baseIndex - colGenomeIdDictionary[genome].counter;
 
         colNameDictionary[genomes_set[genome].label].counter += 1;
         colIsolationCountryDictionary[that.genome_metadata.isolation_country].counter += 1;
         colHostNameDictionary[that.genome_metadata.host_name].counter += 1;
         colGenomeGroupDictionary[that.genome_metadata.genome_group].counter += 1;
-        colGenomeIdDictionary[genome].counter += 1;
+        //colGenomeIdDictionary[genome].counter += 1;
 
         clustergrammerdata.col_nodes.push(col_node);
     }
