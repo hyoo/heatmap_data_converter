@@ -5,7 +5,9 @@
   "main": "converter.js",
   "dependencies": {
     "commander": "^2.14.1",
-    "fs-extra": "^5.0.0"
+    "fs-extra": "^5.0.0",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.11.0"
   },
   "devDependencies": {},
   "scripts": {

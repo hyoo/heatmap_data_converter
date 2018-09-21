@@ -1,0 +1,171 @@
+[
+	{
+		"genome_id": "1004954.6",
+		"genome_name": "Brucella suis bv. 1 str. S2",
+		"isolation_country": "China",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "520487.6",
+		"genome_name": "Brucella suis bv. 3 str. 686",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "29461.21",
+		"genome_name": "Brucella suis strain Human/AR/US/1981",
+		"host_name": "Pig, Sus sp.",
+		"isolation_country": "United States",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "29461.52",
+		"genome_name": "Brucella suis strain 2004000578",
+		"host_name": "Human, Homo sapiens",
+		"isolation_country": "United States",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "644346.3",
+		"genome_name": "Brucella suis bv. 1 str. B06-0059",
+		"host_name": "Bos taurus",
+		"isolation_country": "United States",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "644346.4",
+		"genome_name": "Brucella suis bv. 1 str. B10-0144",
+		"host_name": "Bos taurus",
+		"isolation_country": "United States",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "644346.5",
+		"genome_name": "Brucella suis bv. 1 str. B10-1082",
+		"host_name": "Bos taurus",
+		"isolation_country": "United States",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "644346.6",
+		"genome_name": "Brucella suis bv. 1 str. B12-0577",
+		"host_name": "Bos taurus",
+		"isolation_country": "United States",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "644346.7",
+		"genome_name": "Brucella suis bv. 1 str. B99-1007",
+		"host_name": "Bos taurus",
+		"isolation_country": "United States",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "1004954.3",
+		"genome_name": "Brucella suis bv. 1 str. S2",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "1169238.3",
+		"genome_name": "Brucella suis F5/05-4",
+		"host_name": "Pig, Sus scrofa domesticus",
+		"isolation_country": "France",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "1210453.3",
+		"genome_name": "Brucella suis S2-30",
+		"isolation_country": "China",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "520488.3",
+		"genome_name": "Brucella suis bv. 4 str. 40",
+		"host_name": "Reindeer, Rangifer tarandus",
+		"isolation_country": "Russia",
+		"genome_group": "A"
+	},
+	{
+		"genome_id": "1171378.5",
+		"genome_name": "Brucella suis 019",
+		"host_name": "Sheep",
+		"isolation_country": "China",
+		"genome_group": "B"
+	},
+	{
+		"genome_id": "1112912.3",
+		"genome_name": "Brucella suis VBI22",
+		"genome_group": "B"
+
+	},
+	{
+		"genome_id": "1160227.3",
+		"genome_name": "Brucella suis 63/198",
+		"isolation_country": "",
+		"genome_group": "B"
+
+	},
+	{
+		"genome_id": "1160228.3",
+		"genome_name": "Brucella suis 63/261",
+		"isolation_country": "Denmark",
+		"genome_group": "B"
+
+	},
+	{
+		"genome_id": "1160229.3",
+		"genome_name": "Brucella suis F12/02",
+		"isolation_country": "",
+		"genome_group": "B"
+
+	},
+	{
+		"genome_id": "1160230.3",
+		"genome_name": "Brucella suis 92/63",
+		"host_name": "Hare, Lepus europaeus",
+		"isolation_country": "Czechoslovakia",
+		"genome_group": "B"
+
+	},
+	{
+		"genome_id": "1160231.3",
+		"genome_name": "Brucella suis F8/06-2",
+		"host_name": "Pig, Sus scrofa",
+		"isolation_country": "Belgium",
+		"genome_group": "B"
+
+	},
+	{
+		"genome_id": "1160232.3",
+		"genome_name": "Brucella suis 63/252",
+		"isolation_country": "",
+		"genome_group": "B"
+
+	},
+	{
+		"genome_id": "1160233.3",
+		"genome_name": "Brucella suis 92/29",
+		"isolation_country": "",
+		"genome_group": "C"
+
+	},
+	{
+		"genome_id": "1169236.3",
+		"genome_name": "Brucella suis F5/05-10",
+		"host_name": "Hare, Lepus europaeus",
+		"isolation_country": "France",
+		"genome_group": "C"
+	},
+	{
+		"genome_id": "1169237.3",
+		"genome_name": "Brucella suis F5/03-2",
+		"isolation_country": "",
+		"genome_group": "C"
+	},
+	{
+		"genome_id": "1169239.3",
+		"genome_name": "Brucella suis F7/06-1",
+		"host_name": "Pig, Sus scrofa",
+		"isolation_country": "Germany",
+		"genome_group": "C"
+	}
+]
